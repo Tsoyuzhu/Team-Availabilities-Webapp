@@ -1,0 +1,51 @@
+body {
+	font-family: 'Montserrat';
+}
+
+h1 {
+	font-family: 'Montserrat';
+	font-weight: 800;
+}
+
+h3 {
+	font-family: 'Montserrat';
+	font-weight: 300;
+}
+
+input {
+	font-family: 'Montserrat';
+	width: 300px;
+}
+
+label {
+	margin-right: 20px;
+}
+
+.trclicked {
+	background: #87ffcb;
+	border-color: #68e8b1;
+}
+
+.textblock {
+	text-align: center;
+}
+
+.option-row {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.centerBlock {
+	display: table;
+	margin: auto;
+}
+
+.option-select {
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+
+.check-input {
+	width: 30px;
+	display: none;
+}

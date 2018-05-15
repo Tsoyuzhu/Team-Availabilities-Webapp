@@ -1,0 +1,40 @@
+doctype html
+html
+	head
+		title Team Availability Scheduler
+		link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Montserrat:300,700')
+		link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
+		style 
+			include index.css
+	body 
+		.container 
+			.textblock
+				h1 REAL SKILLS EDUCATION
+				h3.
+					A Team Availability Scheduler.#[br]
+					for the HR Manager
+			.option-select
+				.row.option-row 
+					.col-md-6 
+						.centerBlock
+							form(action='/add')
+								input.btn.btn-outline-success(type='submit' value='Add New Team Members')
+					.col-md-6 
+						.centerBlock
+							form(action='/edit')
+								input.btn.btn-outline-info(type='submit' value='Edit Existing Team Members') 
+				.row.option-row
+					.col-md-6 
+						.centerBlock
+							form(action='/find')
+								input.btn.btn-outline-warning(type='submit' value='Find an Availability') 
+					.col-md-6
+						.centerBlock
+							form(action='/destroy')
+								input.btn.btn-outline-danger(type='submit' value='Destroy Everything') 
+
+
+		// Jquery Script for Bootstrap
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+		// Boostrap javascript 
+		script( src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")

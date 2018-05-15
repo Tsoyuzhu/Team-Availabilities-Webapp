@@ -1,0 +1,7 @@
+mixin rowElement(time)
+	tr
+		th(scope='row') #{time}
+		each val in ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'] 
+			td.clickable(scope='row')
+				input.check-input(type='checkbox', name= val + time , value='true') 
+		

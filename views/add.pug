@@ -1,0 +1,60 @@
+doctype html
+html
+	head
+		title Add Team Member
+		link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:300,700')
+		link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
+		style 
+			include index.css
+			include rowElement-mixin.pug
+	body 
+		.container 
+			.textblock
+				h1 Add a Member to the System
+				h3.
+					Check the box if they are#[br]
+					available during the timeslot.
+			.option-select
+				form(action='/add/submit', method='post', id='availform')
+					.row
+						.col-md-12
+							label(for='name') Name
+							input(type='text' name='name' id='name')
+					.row
+						.col-md-12
+							table.table.table-bordered
+								thead
+									tr
+										th(scope='col')
+										th(scope='col') Mon
+										th(scope='col') Tue
+										th(scope='col') Wed
+										th(scope='col') Thu
+										th(scope='col') Fri
+										th(scope='col') Sat
+										th(scope='col') Sun
+								tbody 
+									+rowElement('09:00 - 10:00')
+									+rowElement('10:00 - 11:00')
+									+rowElement('11:00 - 12:00')
+									+rowElement('12:00 - 13:00')
+									+rowElement('13:00 - 14:00')
+									+rowElement('14:00 - 15:00')
+									+rowElement('15:00 - 16:00')
+									+rowElement('16:00 - 17:00')
+									+rowElement('17:00 - 18:00')
+									+rowElement('18:00 - 19:00')
+									+rowElement('19:00 - 20:00')
+									+rowElement('20:00 - 21:00')
+									+rowElement('21:00 - 22:00')
+									+rowElement('22:00 - 23:00')
+									+rowElement('23:00 - 24:00')
+
+				label(for='submit') Submit Member Availabilities
+				button.btn.btn-outline-info(type='submit' form='availform', id='submit')
+
+		// Jquery Script for Bootstrap
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+		// Boostrap javascript 
+		script( src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")
+		script(type="text/javascript" src='table.js')
