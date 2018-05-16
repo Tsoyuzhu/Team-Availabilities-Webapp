@@ -15,7 +15,7 @@ html
 					Check the box if they are#[br]
 					available during the timeslot.
 			.option-select
-				form(action='/add/submit', method='post', id='availform')
+				form(action='/add/submit', method='POST', id='availform')
 					.row
 						.col-md-12
 							label(for='name') Name
@@ -34,6 +34,7 @@ html
 										th(scope='col') Sat
 										th(scope='col') Sun
 								tbody 
+									// We are going to alter this so that it generates the time beforehand. 
 									+rowElement('09:00 - 10:00')
 									+rowElement('10:00 - 11:00')
 									+rowElement('11:00 - 12:00')
