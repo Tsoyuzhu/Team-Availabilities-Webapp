@@ -34,22 +34,54 @@ html
 										th(scope='col') Sat
 										th(scope='col') Sun
 								tbody 
-									// We are going to alter this so that it generates the time beforehand. 
-									+rowElement('09:00 - 10:00')
-									+rowElement('10:00 - 11:00')
-									+rowElement('11:00 - 12:00')
-									+rowElement('12:00 - 13:00')
-									+rowElement('13:00 - 14:00')
-									+rowElement('14:00 - 15:00')
-									+rowElement('15:00 - 16:00')
-									+rowElement('16:00 - 17:00')
-									+rowElement('17:00 - 18:00')
-									+rowElement('18:00 - 19:00')
-									+rowElement('19:00 - 20:00')
-									+rowElement('20:00 - 21:00')
-									+rowElement('21:00 - 22:00')
-									+rowElement('22:00 - 23:00')
-									+rowElement('23:00 - 24:00')
+									tr
+										th(scope='row') 8:00 - 9:00 
+										+rowElement('8') 
+									tr
+										th(scope='row') 9:00 - 10:00 
+										+rowElement('9') 
+									tr
+										th(scope='row') 10:00 - 11:00 
+										+rowElement('10')
+									tr
+										th(scope='row') 11:00 - 12:00 
+										+rowElement('11')
+									tr
+										th(scope='row') 12:00 - 13:00 
+										+rowElement('12')
+									tr
+										th(scope='row') 13:00 - 14:00 
+										+rowElement('13')
+									tr
+										th(scope='row') 14:00 - 15:00 
+										+rowElement('14')
+									tr
+										th(scope='row') 15:00 - 16:00 
+										+rowElement('15')
+									tr
+										th(scope='row') 16:00 - 17:00 
+										+rowElement('16')
+									tr
+										th(scope='row') 17:00 - 18:00 
+										+rowElement('17')
+									tr
+										th(scope='row') 18:00 - 19:00 
+										+rowElement('18')
+									tr
+										th(scope='row') 19:00 - 20:00 
+										+rowElement('19')          
+									tr
+										th(scope='row') 20:00 - 21:00 
+										+rowElement('20') 
+									tr
+										th(scope='row') 21:00 - 22:00 
+										+rowElement('21') 
+									tr
+										th(scope='row') 22:00 - 23:00 
+										+rowElement('22') 
+									tr
+										th(scope='row') 23:00 - 24:00 
+										+rowElement('23') 
 
 				label(for='submit') Submit Member Availabilities
 				button.btn.btn-outline-info(type='submit' form='availform', id='submit')
