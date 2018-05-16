@@ -282,7 +282,12 @@ app.get('/destroy', function (req, res) {
 
 app.get('/destroy/:id', function(req, res){
 	console.log("You sent the id "+req.params.id);
-	res.redirect('/destroy')
+	Member.remove({_id: req.params.id}, function(err) {
+		if (err) {
+			console.log("Failed to destroy the database member");
+		}
+	});
+	res.redirect('/destroy');
 });
 
 // START SERVER
