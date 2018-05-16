@@ -281,7 +281,8 @@ app.get('/destroy', function (req, res) {
 });
 
 app.get('/destroy/:id', function(req, res){
-	res.render('destroy');
+	console.log("You sent the id "+req.params.id);
+	res.redirect('/destroy')
 });
 
 // START SERVER

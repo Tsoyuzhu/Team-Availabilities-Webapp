@@ -16,7 +16,7 @@ html
 					to utterly demolish them.
 			.option-select
 				each val in members 
-					form.option-row(action='/destroy/:id')
+					form.option-row(action='/destroy/'+val._id)
 						input.btn.btn-outline-danger(type='submit' value=val.name)
 		// Jquery Script for Bootstrap
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
