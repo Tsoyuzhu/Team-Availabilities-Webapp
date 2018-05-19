@@ -11,13 +11,21 @@ html
 		.container 
 			.textblock
 				h1 Destroy a Team Member's Availabilities!!
-				h3.
-					Click on a member#[br]
-					to utterly demolish them.
+				if (members.length > 0)
+					h3.
+						Click on a member#[br]
+						to utterly demolish them.
+				else 
+					h3.
+						Unfortunately you do not#[br]
+						have any members to demolish.
 			.option-select
 				each val in members 
 					form.option-row(action='/destroy/'+val._id)
 						input.btn.btn-outline-danger(type='submit' value=val.name)
+			.option-select 
+				form.option-row(action='/')
+							input.btn.btn-outline-success(type='submit' value="Spare them")
 		// Jquery Script for Bootstrap
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
 		// Boostrap javascript 

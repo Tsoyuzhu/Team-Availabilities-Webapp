@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+//$(document).ready(function() {
   $('td').click(function(){
   	$(this).toggleClass("trclicked");
 	if ( $(this).children().attr("value") == "off") {
@@ -7,4 +7,4 @@ $( document ).ready(function() {
 		$(this).children().attr("value","off");
 	}
   });
-});
+//});

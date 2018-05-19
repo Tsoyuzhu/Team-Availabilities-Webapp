@@ -1,0 +1,97 @@
+doctype html
+html
+	head
+		title Team Availability Scheduler
+		link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Montserrat:300,700')
+		link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
+		style 
+			include index.css
+			include rowElementEdit-mixin.pug
+	body 
+		.container 
+			.textblock
+				h1 REAL SKILLS EDUCATION
+				h3.
+					You are editing #[br]
+					#{member.name}'s availabilities. 
+				if (success) 
+					h4.success-message.
+						Update was successful!
+			.option-select
+				form(action='/edit/'+member._id, method='POST', id='updateform')
+					.row
+						.col-md-12
+							table.table.table-bordered
+								thead
+									tr
+										th(scope='col')
+										th(scope='col') Mon
+										th(scope='col') Tue
+										th(scope='col') Wed
+										th(scope='col') Thu
+										th(scope='col') Fri
+										th(scope='col') Sat
+										th(scope='col') Sun
+								tbody 
+									tr
+										th(scope='row') 8:00 - 9:00 
+										+rowElementEdit('8',member.mon8,member.tue8,member.wed8,member.thu8,member.fri8,member.sat8,member.sun8) 
+									tr
+										th(scope='row') 9:00 - 10:00 
+										+rowElementEdit('9',member.mon9,member.tue9,member.wed9,member.thu9,member.fri9,member.sat9,member.sun9) 
+									tr
+										th(scope='row') 10:00 - 11:00 
+										+rowElementEdit('10',member.mon10,member.tue10,member.wed10,member.thu10,member.fri10,member.sat10,member.sun10)
+									tr
+										th(scope='row') 11:00 - 12:00 
+										+rowElementEdit('11',member.mon11,member.tue11,member.wed11,member.thu11,member.fri11,member.sat11,member.sun11)
+									tr
+										th(scope='row') 12:00 - 13:00 
+										+rowElementEdit('12',member.mon12,member.tue12,member.wed12,member.thu12,member.fri12,member.sat12,member.sun12)
+									tr
+										th(scope='row') 13:00 - 14:00 
+										+rowElementEdit('13',member.mon13,member.tue13,member.wed13,member.thu13,member.fri13,member.sat13,member.sun13)
+									tr
+										th(scope='row') 14:00 - 15:00 
+										+rowElementEdit('14',member.mon14,member.tue14,member.wed14,member.thu14,member.fri14,member.sat14,member.sun14)
+									tr
+										th(scope='row') 15:00 - 16:00 
+										+rowElementEdit('15',member.mon15,member.tue15,member.wed15,member.thu15,member.fri15,member.sat15,member.sun15)
+									tr
+										th(scope='row') 16:00 - 17:00 
+										+rowElementEdit('15',member.mon15,member.tue15,member.wed15,member.thu15,member.fri15,member.sat15,member.sun15)
+									tr
+										th(scope='row') 17:00 - 18:00 
+										+rowElementEdit('17',member.mon17,member.tue17,member.wed17,member.thu17,member.fri17,member.sat17,member.sun17)
+									tr
+										th(scope='row') 18:00 - 19:00 
+										+rowElementEdit('18',member.mon18,member.tue18,member.wed18,member.thu18,member.fri18,member.sat18,member.sun18)
+									tr
+										th(scope='row') 19:00 - 20:00 
+										+rowElementEdit('19',member.mon19,member.tue19,member.wed19,member.thu19,member.fri19,member.sat19,member.sun19)  
+									tr
+										th(scope='row') 20:00 - 21:00 
+										+rowElementEdit('20',member.mon20,member.tue20,member.wed20,member.thu20,member.fri20,member.sat20,member.sun20)
+									tr
+										th(scope='row') 21:00 - 22:00 
+										+rowElementEdit('21',member.mon21,member.tue21,member.wed21,member.thu21,member.fri21,member.sat21,member.sun21)
+									tr
+										th(scope='row') 22:00 - 23:00 
+										+rowElementEdit('22',member.mon22,member.tue22,member.wed22,member.thu22,member.fri22,member.sat22,member.sun22) 
+									tr
+										th(scope='row') 23:00 - 24:00 
+										+rowElementEdit('23',member.mon23,member.tue23,member.wed23,member.thu23,member.fri23,member.sat23,member.sun23)
+
+				label(for='submit') Confirm Member Availability Changes
+				button.btn.btn-outline-info(type='submit' form='updateform', id='submit')
+			.option-select 
+				form.option-row(action='/')
+							input.btn.btn-outline-info(type='submit' value='Go to Home')
+
+		// Jquery Script for Bootstrap
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+		// Boostrap javascript 
+		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")
+		// Table click Javascript 
+		script
+			include table.js

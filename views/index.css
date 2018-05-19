@@ -49,3 +49,8 @@ label {
 	width: 30px;
 	display: none;
 }
+
+.success-message {
+	color: #31b0b7;
+	font-size: 15px;
+}

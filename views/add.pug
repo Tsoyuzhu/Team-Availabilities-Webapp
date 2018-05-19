@@ -19,7 +19,7 @@ html
 					.row
 						.col-md-12
 							label(for='name') Name
-							input(type='text' name='name' id='name')
+							input(type='text' name='name' id='name' required='true')
 					.row
 						.col-md-12
 							table.table.table-bordered
@@ -85,9 +85,14 @@ html
 
 				label(for='submit') Submit Member Availabilities
 				button.btn.btn-outline-info(type='submit' form='availform', id='submit')
+			.option-select 
+				form.option-row(action='/')
+							input.btn.btn-outline-info(type='submit' value='Go to Home')
 
 		// Jquery Script for Bootstrap
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
 		// Boostrap javascript 
-		script( src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")
-		script(type="text/javascript" src='table.js')
+		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")
+		// Table click javascript
+		script
+			include table.js

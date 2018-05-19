@@ -13,9 +13,15 @@ html
 				h3.
 					Edit an existing member's #[br]
 					availabilities. 
-
-
+				.option-select
+				each val in members 
+					form.option-row(action='/edit/'+val._id, method="GET")
+						input.btn.btn-outline-info(type='submit' value=val.name)
+				.option-select 
+				form.option-row(action='/')
+							input.btn.btn-outline-warning(type='submit' value='Go to Home')
 		// Jquery Script for Bootstrap
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
 		// Boostrap javascript 
-		script( src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")
+		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")
+		// Table click javascript

@@ -1,0 +1,43 @@
+mixin rowElementEdit(time,mon,tue,wed,thu,fri,sat,sun)
+	if (mon == 'on')
+		td.clickable.trclicked(scope='row')
+			input.check-input(type='checkbox', name= 'submit['+'mon'+time+']', value='on', checked='checked') 
+	else 
+		td.clickable(scope='row')
+			input.check-input(type='checkbox', name= 'submit['+'mon'+time+']', value='off', checked='checked') 
+	if (tue == 'on')
+		td.clickable.trclicked(scope='row')
+			input.check-input(type='checkbox', name= 'submit['+'tue'+time+']', value='on', checked='checked') 
+	else 
+		td.clickable(scope='row')
+			input.check-input(type='checkbox', name= 'submit['+'tue'+time+']', value='off', checked='checked') 
+	if (wed == 'on')
+		td.clickable.trclicked(scope='row')
+			input.check-input(type='checkbox', name= 'submit['+'wed'+time+']', value='on', checked='checked') 
+	else 
+		td.clickable(scope='row')
+			input.check-input(type='checkbox', name= 'submit['+'wed'+time+']', value='off', checked='checked') 
+	if (thu == 'on')
+		td.clickable.trclicked(scope='row')
+			input.check-input(type='checkbox', name= 'submit['+'thu'+time+']', value='on', checked='checked') 
+	else 
+		td.clickable(scope='row')
+			input.check-input(type='checkbox', name= 'submit['+'thu'+time+']', value='off', checked='checked') 
+	if (fri == 'on')
+		td.clickable.trclicked(scope='row')
+			input.check-input(type='checkbox', name= 'submit['+'fri'+time+']', value='on', checked='checked') 
+	else 
+		td.clickable(scope='row')
+			input.check-input(type='checkbox', name= 'submit['+'fri'+time+']', value='off', checked='checked') 
+	if (sat == 'on')
+		td.clickable.trclicked(scope='row')
+			input.check-input(type='checkbox', name= 'submit['+'sat'+time+']', value='on', checked='checked') 
+	else 
+		td.clickable(scope='row')
+			input.check-input(type='checkbox', name= 'submit['+'sat'+time+']', value='off', checked='checked') 
+	if (sun == 'on')
+		td.clickable.trclicked(scope='row')
+			input.check-input(type='checkbox', name= 'submit['+'sun'+time+']', value='on', checked='checked') 
+	else 
+		td.clickable(scope='row')
+			input.check-input(type='checkbox', name= 'submit['+'sun'+time+']', value='off', checked='checked') 
