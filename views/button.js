@@ -1,6 +1,6 @@
 $(document).ready(function() {
-  $('td').click(function(){
-  	$(this).toggleClass("trclicked");
+  $('.choose-member').click(function(){
+  	$(this).toggleClass("btn-clicked");
 	if ( $(this).children().attr("value") == 0) {
   		$(this).children().attr("value",1);
 	} else {

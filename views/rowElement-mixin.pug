@@ -1,5 +1,5 @@
 mixin rowElement(time)
 	each val in ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'] 
 		td.clickable(scope='row')
-			input.check-input(type='checkbox', name= 'submit['+val+time+']', value='off', checked='checked') 
+			input.check-input(type='checkbox', name= 'submit['+val+time+']', value=0, checked='checked') 
 			
