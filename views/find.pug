@@ -14,17 +14,19 @@ html
 					Find a time when  #[br]
 					people are free. 
 				h6.
-					Select at least one member below then procede to the next step. 
+					Select at least one member below and the days you wish to find availabilities. 
 				.option-select
-					form.option-row(action='/find', method="GET", name='select-members')
-					each val in members 
-						button.btn.choose-member #{val.name} 
-							input.check-input(type='checkbox', name=val.name, checked='checked', value='off')
-						br
-					input.btn.btn-outline-success(type='submit', value='Procede to next step')
+					form.option-row(action='/find/display', method="POST", id='select-members')
+						h6.
+							Select People
+						each val in members 
+							button.btn.choose-member(type="button") #{val.name} 
+								input.check-input(type='checkbox', name='members['+val.id+']', checked='checked', value=0)
+					input.btn.btn-outline-success(type='submit',form='select-members', value='Procede')
 				.option-select 
 					form.option-row(action='/')
 							input.btn.btn-outline-warning(type='submit' value='Go to Home')
+
 		// Jquery Script for Bootstrap
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
 		// Boostrap javascript 

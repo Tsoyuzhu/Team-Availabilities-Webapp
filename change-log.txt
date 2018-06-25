@@ -1,0 +1,22 @@
+// A document of the changes and updates being made to this application.
+
+------------------------------------------------------------------------
+< 26/06/18 sat 9:24 pm >
+
+- Rewriting code for editmem.pug and rowElementEdit-mixin.pug with the 
+  intention of making it cleaner. Maintain a focus on writing clean and
+  understandable code. 
+- Task completed. Code is much cleaner and edit functionality has been  
+  retained. 
+
+------------------------------------------------------------------------
+< 26/06/18 mon 1:59 pm >
+
+- Making a design decision. Either we do constant book-keeping tasks
+  to keep a table with all the availabilites or we recalculate the 
+  availabilities each time. The first option is more scalable but
+  makes it difficult to update whenever we delete a member. 
+  Our team is small and so we should not need to find than 25 
+  availabilities at a time. Thus we will recalculate the availabilities 
+  each time. 
+- Basic find has been implemented. 

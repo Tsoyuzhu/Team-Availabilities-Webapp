@@ -6,7 +6,7 @@ html
 		link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
 		style 
 			include index.css
-			include rowElement-mixin.pug
+			include rowElementCreate-mixin.pug
 	body 
 		.container 
 			.textblock
@@ -35,53 +35,53 @@ html
 										th(scope='col') Sun
 								tbody 
 									tr
-										th(scope='row') 8:00 - 9:00 
-										+rowElement('8') 
+										th(scope='row') 8:00 am 
+										+rowElementCreate('8') 
 									tr
-										th(scope='row') 9:00 - 10:00 
-										+rowElement('9') 
+										th(scope='row') 9:00 am
+										+rowElementCreate('9') 
 									tr
-										th(scope='row') 10:00 - 11:00 
-										+rowElement('10')
+										th(scope='row') 10:00 am
+										+rowElementCreate('10')
 									tr
-										th(scope='row') 11:00 - 12:00 
-										+rowElement('11')
+										th(scope='row') 11:00 am
+										+rowElementCreate('11')
 									tr
-										th(scope='row') 12:00 - 13:00 
-										+rowElement('12')
+										th(scope='row') 12:00 pm
+										+rowElementCreate('12')
 									tr
-										th(scope='row') 13:00 - 14:00 
-										+rowElement('13')
+										th(scope='row') 1:00 pm
+										+rowElementCreate('13')
 									tr
-										th(scope='row') 14:00 - 15:00 
-										+rowElement('14')
+										th(scope='row') 2:00 pm
+										+rowElementCreate('14')
 									tr
-										th(scope='row') 15:00 - 16:00 
-										+rowElement('15')
+										th(scope='row') 3:00 pm
+										+rowElementCreate('15')
 									tr
-										th(scope='row') 16:00 - 17:00 
-										+rowElement('16')
+										th(scope='row') 4:00 pm
+										+rowElementCreate('16')
 									tr
-										th(scope='row') 17:00 - 18:00 
-										+rowElement('17')
+										th(scope='row') 5:00 pm
+										+rowElementCreate('17')
 									tr
-										th(scope='row') 18:00 - 19:00 
-										+rowElement('18')
+										th(scope='row') 6:00 pm
+										+rowElementCreate('18')
 									tr
-										th(scope='row') 19:00 - 20:00 
-										+rowElement('19')          
+										th(scope='row') 7:00 pm
+										+rowElementCreate('19')          
 									tr
-										th(scope='row') 20:00 - 21:00 
-										+rowElement('20') 
+										th(scope='row') 8:00 pm
+										+rowElementCreate('20') 
 									tr
-										th(scope='row') 21:00 - 22:00 
-										+rowElement('21') 
+										th(scope='row') 9:00 pm
+										+rowElementCreate('21') 
 									tr
-										th(scope='row') 22:00 - 23:00 
-										+rowElement('22') 
+										th(scope='row') 10:00 pm 
+										+rowElementCreate('22') 
 									tr
-										th(scope='row') 23:00 - 24:00 
-										+rowElement('23') 
+										th(scope='row') 11:00 pm
+										+rowElementCreate('23') 
 
 				label(for='available') Submit Member Availabilities
 				button.btn.btn-outline-info(type='submit' form='availform', id='available')
