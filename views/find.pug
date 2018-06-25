@@ -14,11 +14,11 @@ html
 					Find a time when  #[br]
 					people are free. 
 				h6.
-					Select at least one member below and the days you wish to find availabilities. 
+					Select at least one member below.
 				.option-select
 					form.option-row(action='/find/display', method="POST", id='select-members')
-						h6.
-							Select People
+						h6.bold.
+							Select Members
 						each val in members 
 							button.btn.choose-member(type="button") #{val.name} 
 								input.check-input(type='checkbox', name='members['+val.id+']', checked='checked', value=0)

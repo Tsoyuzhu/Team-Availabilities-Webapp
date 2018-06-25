@@ -21,6 +21,10 @@ label {
 	margin-right: 20px;
 }
 
+.bold {
+	font-weight: bold;
+}
+
 .trclicked {
 	background: #87ffcb;
 	border-color: #68e8b1;
@@ -48,6 +52,14 @@ label {
 .check-input {
 	width: 30px;
 	display: none;
+}
+
+.name-label {
+	font-weight: bold;
+}
+
+.name-input-block {
+	margin-bottom: 20px;
 }
 
 .success-message {
