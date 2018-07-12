@@ -1,0 +1,5 @@
+mixin rowElementCreateNF(time)
+	each val in ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'] 
+		td.clickable.colourNF(scope='row')
+			input.check-input(type='checkbox', name= val+'NF'+'['+time+']', value=0, checked='checked', form='availform') 
+			

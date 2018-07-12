@@ -6,88 +6,23 @@ html
 		link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
 		style 
 			include index.css
-			include rowElementCreate-mixin.pug
+			include add.css
+			include addstep1-mixin.pug 
+			include addstep2-mixin.pug 
+			include addstep3-mixin.pug
+			include rowElementCreateF-mixin.pug
+			include rowElementCreateNF-mixin.pug
 	body 
-		.container 
-			.textblock
-				h1 Add a Member to the System
-				h3.
-					Check the box if they are#[br]
-					available during the timeslot.
-			.option-select
-				form(action='/add/submit', method='POST', id='availform')
-					.row.name-input-block
-						.col-md-12
-							label.name-label(for='name') Name
-							input(type='text' name='name' id='name' required='true')
-					.row
-						.col-md-12
-							table.table.table-bordered
-								thead
-									tr
-										th(scope='col')
-										th(scope='col') Mon
-										th(scope='col') Tue
-										th(scope='col') Wed
-										th(scope='col') Thu
-										th(scope='col') Fri
-										th(scope='col') Sat
-										th(scope='col') Sun
-								tbody 
-									tr
-										th(scope='row') 8:00 am 
-										+rowElementCreate('8') 
-									tr
-										th(scope='row') 9:00 am
-										+rowElementCreate('9') 
-									tr
-										th(scope='row') 10:00 am
-										+rowElementCreate('10')
-									tr
-										th(scope='row') 11:00 am
-										+rowElementCreate('11')
-									tr
-										th(scope='row') 12:00 pm
-										+rowElementCreate('12')
-									tr
-										th(scope='row') 1:00 pm
-										+rowElementCreate('13')
-									tr
-										th(scope='row') 2:00 pm
-										+rowElementCreate('14')
-									tr
-										th(scope='row') 3:00 pm
-										+rowElementCreate('15')
-									tr
-										th(scope='row') 4:00 pm
-										+rowElementCreate('16')
-									tr
-										th(scope='row') 5:00 pm
-										+rowElementCreate('17')
-									tr
-										th(scope='row') 6:00 pm
-										+rowElementCreate('18')
-									tr
-										th(scope='row') 7:00 pm
-										+rowElementCreate('19')          
-									tr
-										th(scope='row') 8:00 pm
-										+rowElementCreate('20') 
-									tr
-										th(scope='row') 9:00 pm
-										+rowElementCreate('21') 
-									tr
-										th(scope='row') 10:00 pm 
-										+rowElementCreate('22') 
-									tr
-										th(scope='row') 11:00 pm
-										+rowElementCreate('23') 
+		h1.textblock Add a Member to the System
+		.container
+			form(action='/add/submit', method='POST', id='availform')
+				+addstep1() 
+				+addstep2()
+				+addstep3() 
 
-				label(for='available') Submit Member Availabilities
-				button.btn.btn-outline-info(type='submit' form='availform', id='available')
-			.option-select 
-				form.option-row(action='/')
-					input.btn.btn-outline-info(type='submit' value='Go to Home')
+				.option-select 
+					form.option-row(action='/')
+						input.btn.btn-outline-info(type='submit' value='Go to Home')
 
 		// Jquery Script for Bootstrap
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
@@ -96,3 +31,5 @@ html
 		// Table click javascript
 		script
 			include table.js
+			include add.js
+			include enteredinput.js

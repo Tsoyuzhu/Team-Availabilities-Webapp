@@ -25,9 +25,14 @@ label {
 	font-weight: bold;
 }
 
-.trclicked {
-	background: #87ffcb;
+.trclickedF {
+	background: #b6f9ce;
 	border-color: #68e8b1;
+}
+
+.trclickedNF {
+	background: #85b1f7;
+	border-color: #85b1f7;
 }
 
 .textblock {
@@ -66,9 +71,24 @@ label {
 	color: #31b0b7;
 	font-size: 15px;
 }
+
 .choose-member {
 	background: #f4f8ff;
 }
+
 .btn-clicked {
 	background: #75aaff;
+}
+
+.warning {
+	display: none;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }

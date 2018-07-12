@@ -1,0 +1,73 @@
+mixin addstep2()
+	.addstep2
+		.textblock
+			h3.
+				Step 2 #[br]
+				Check the box if they are available#[br]
+				face-to-face during the timeslot.
+			.option-select
+				.row
+					.col-md-12
+						table.table.table-bordered.unselectable
+							thead
+								tr
+									th(scope='col')
+									th(scope='col') Mon
+									th(scope='col') Tue
+									th(scope='col') Wed
+									th(scope='col') Thu
+									th(scope='col') Fri
+									th(scope='col') Sat
+									th(scope='col') Sun
+							tbody 
+								tr
+									th(scope='row') 8:00 am 
+									+rowElementCreateF('8') 
+								tr
+									th(scope='row') 9:00 am
+									+rowElementCreateF('9') 
+								tr
+									th(scope='row') 10:00 am
+									+rowElementCreateF('10')
+								tr
+									th(scope='row') 11:00 am
+									+rowElementCreateF('11')
+								tr
+									th(scope='row') 12:00 pm
+									+rowElementCreateF('12')
+								tr
+									th(scope='row') 1:00 pm
+									+rowElementCreateF('13')
+								tr
+									th(scope='row') 2:00 pm
+									+rowElementCreateF('14')
+								tr
+									th(scope='row') 3:00 pm
+									+rowElementCreateF('15')
+								tr
+									th(scope='row') 4:00 pm
+									+rowElementCreateF('16')
+								tr
+									th(scope='row') 5:00 pm
+									+rowElementCreateF('17')
+								tr
+									th(scope='row') 6:00 pm
+									+rowElementCreateF('18')
+								tr
+									th(scope='row') 7:00 pm
+									+rowElementCreateF('19')          
+								tr
+									th(scope='row') 8:00 pm
+									+rowElementCreateF('20') 
+								tr
+									th(scope='row') 9:00 pm
+									+rowElementCreateF('21') 
+								tr
+									th(scope='row') 10:00 pm 
+									+rowElementCreateF('22') 
+								tr
+									th(scope='row') 11:00 pm
+									+rowElementCreateF('23') 
+				.option-select
+					button.btn.btn-outline-danger.step2bck(type="button") Back to step 1
+					button.btn.btn-outline-warning.step2fwd(type="button") Procede to step 3

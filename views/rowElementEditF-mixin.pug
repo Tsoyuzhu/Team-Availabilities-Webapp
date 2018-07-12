@@ -1,0 +1,8 @@
+mixin rowElementEditF(time, day, index, valid)
+	if (valid[index] == 1)
+		td.clickable.trclicked.colourF.trclickedF(scope='row')
+			input.check-input(type='checkbox', name= day+'F'+'['+time+']', value=1, checked='checked') 
+	else 
+		td.clickable.colourF(scope='row')
+			input.check-input(type='checkbox', name= day+'F'+'['+time+']', value=0, checked='checked') 
+	

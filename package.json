@@ -1,0 +1,26 @@
+{
+  "name": "HRapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongoose": "^5.1.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tsoyuzhu/Team-Availabilities-Webapp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tsoyuzhu/Team-Availabilities-Webapp/issues"
+  },
+  "homepage": "https://github.com/Tsoyuzhu/Team-Availabilities-Webapp#readme"
+}

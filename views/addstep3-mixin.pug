@@ -1,0 +1,76 @@
+mixin addstep3()
+	.addstep3
+		.textblock
+			h3.
+				Step 3 #[br]
+				Check the box if they are available #[br]
+				online during the timeslot.
+			.option-select
+				form(action='/add/submit', method='POST', id='availform')
+					.row
+						.col-md-12
+							table.table.table-bordered.unselectable
+								thead
+									tr
+										th(scope='col')
+										th(scope='col') Mon
+										th(scope='col') Tue
+										th(scope='col') Wed
+										th(scope='col') Thu
+										th(scope='col') Fri
+										th(scope='col') Sat
+										th(scope='col') Sun
+								tbody 
+									tr
+										th(scope='row') 8:00 am 
+										+rowElementCreateNF('8') 
+									tr
+										th(scope='row') 9:00 am
+										+rowElementCreateNF('9') 
+									tr
+										th(scope='row') 10:00 am
+										+rowElementCreateNF('10')
+									tr
+										th(scope='row') 11:00 am
+										+rowElementCreateNF('11')
+									tr
+										th(scope='row') 12:00 pm
+										+rowElementCreateNF('12')
+									tr
+										th(scope='row') 1:00 pm
+										+rowElementCreateNF('13')
+									tr
+										th(scope='row') 2:00 pm
+										+rowElementCreateNF('14')
+									tr
+										th(scope='row') 3:00 pm
+										+rowElementCreateNF('15')
+									tr
+										th(scope='row') 4:00 pm
+										+rowElementCreateNF('16')
+									tr
+										th(scope='row') 5:00 pm
+										+rowElementCreateNF('17')
+									tr
+										th(scope='row') 6:00 pm
+										+rowElementCreateNF('18')
+									tr
+										th(scope='row') 7:00 pm
+										+rowElementCreateNF('19')          
+									tr
+										th(scope='row') 8:00 pm
+										+rowElementCreateNF('20') 
+									tr
+										th(scope='row') 9:00 pm
+										+rowElementCreateNF('21') 
+									tr
+										th(scope='row') 10:00 pm 
+										+rowElementCreateNF('22') 
+									tr
+										th(scope='row') 11:00 pm
+										+rowElementCreateNF('23') 
+			.option-select
+				button.btn.btn-outline-danger.step3bck(type='submit' form='availform', id='available') Back to step 2
+				button.btn.btn-outline-info.step3fwd(type='submit' form='availform', id='available') Complete Registration
+			.option-select
+				.warning You did not enter a valid name. 

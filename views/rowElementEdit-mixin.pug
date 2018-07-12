@@ -1,4 +1,4 @@
-mixin rowElementEdit(time, day, index, valid)
+mixin rowElementEditF(time, day, index, valid)
 	if (valid[index] == 1)
 		td.clickable.trclicked(scope='row')
 			input.check-input(type='checkbox', name= day+'['+time+']', value=1, checked='checked') 

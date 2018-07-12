@@ -6,7 +6,11 @@ html
 		link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
 		style 
 			include index.css
-			include rowElementEdit-mixin.pug
+			include editmem.css
+			include editmemstep1-mixin.pug
+			include editmemstep2-mixin.pug
+			include rowElementEditF-mixin.pug
+			include rowElementEditNF-mixin.pug
 	body 
 		.container 
 			.textblock
@@ -14,177 +18,20 @@ html
 				h3.
 					You are editing #[br]
 					#{member.name}'s availabilities. 
+
 				if (success) 
 					h4.success-message.
 						Update was successful!
+
 			.option-select
 				form(action='/edit/'+member._id, method='POST', id='updateform')
-					.row
-						.col-md-12
-							table.table.table-bordered
-								thead
-									tr
-										th(scope='col')
-										th(scope='col') Mon
-										th(scope='col') Tue
-										th(scope='col') Wed
-										th(scope='col') Thu
-										th(scope='col') Fri
-										th(scope='col') Sat
-										th(scope='col') Sun
-
-								tbody 
-									tr
-										th(scope='row') 8:00 am
-										+rowElementEdit('8','mon', 0, member.mon)
-										+rowElementEdit('8','tue', 0, member.tue) 
-										+rowElementEdit('8','wed', 0, member.wed) 
-										+rowElementEdit('8','thu', 0, member.thu) 
-										+rowElementEdit('8','fri', 0, member.fri)
-										+rowElementEdit('8','sat', 0, member.sat)
-										+rowElementEdit('8','sun', 0, member.sun)
-									tr
-										th(scope='row') 9:00 am
-										+rowElementEdit('9','mon', 1, member.mon)
-										+rowElementEdit('9','tue', 1, member.tue) 
-										+rowElementEdit('9','wed', 1, member.wed) 
-										+rowElementEdit('9','thu', 1, member.thu) 
-										+rowElementEdit('9','fri', 1, member.fri)
-										+rowElementEdit('9','sat', 1, member.sat)
-										+rowElementEdit('9','sun', 1, member.sun)
-									tr
-										th(scope='row') 10:00 am
-										+rowElementEdit('10','mon', 2, member.mon)
-										+rowElementEdit('10','tue', 2, member.tue) 
-										+rowElementEdit('10','wed', 2, member.wed) 
-										+rowElementEdit('10','thu', 2, member.thu) 
-										+rowElementEdit('10','fri', 2, member.fri)
-										+rowElementEdit('10','sat', 2, member.sat)
-										+rowElementEdit('10','sun', 2, member.sun)
-									tr
-										th(scope='row') 11:00 am
-										+rowElementEdit('11','mon', 3, member.mon)
-										+rowElementEdit('11','tue', 3, member.tue) 
-										+rowElementEdit('11','wed', 3, member.wed) 
-										+rowElementEdit('11','thu', 3, member.thu) 
-										+rowElementEdit('11','fri', 3, member.fri)
-										+rowElementEdit('11','sat', 3, member.sat)
-										+rowElementEdit('11','sun', 3, member.sun)
-									tr
-										th(scope='row') 12:00 pm
-										+rowElementEdit('12','mon', 4, member.mon)
-										+rowElementEdit('12','tue', 4, member.tue) 
-										+rowElementEdit('12','wed', 4, member.wed) 
-										+rowElementEdit('12','thu', 4, member.thu) 
-										+rowElementEdit('12','fri', 4, member.fri)
-										+rowElementEdit('12','sat', 4, member.sat)
-										+rowElementEdit('12','sun', 4, member.sun)
-									tr
-										th(scope='row') 1:00 pm
-										+rowElementEdit('13','mon', 5, member.mon)
-										+rowElementEdit('13','tue', 5, member.tue) 
-										+rowElementEdit('13','wed', 5, member.wed) 
-										+rowElementEdit('13','thu', 5, member.thu) 
-										+rowElementEdit('13','fri', 5, member.fri)
-										+rowElementEdit('13','sat', 5, member.sat)
-										+rowElementEdit('13','sun', 5, member.sun)
-									tr
-										th(scope='row') 2:00 pm
-										+rowElementEdit('14','mon', 6, member.mon)
-										+rowElementEdit('14','tue', 6, member.tue) 
-										+rowElementEdit('14','wed', 6, member.wed) 
-										+rowElementEdit('14','thu', 6, member.thu) 
-										+rowElementEdit('14','fri', 6, member.fri)
-										+rowElementEdit('14','sat', 6, member.sat)
-										+rowElementEdit('14','sun', 6, member.sun)
-									tr
-										th(scope='row') 3:00 pm
-										+rowElementEdit('15','mon', 7, member.mon)
-										+rowElementEdit('15','tue', 7, member.tue) 
-										+rowElementEdit('15','wed', 7, member.wed) 
-										+rowElementEdit('15','thu', 7, member.thu) 
-										+rowElementEdit('15','fri', 7, member.fri)
-										+rowElementEdit('15','sat', 7, member.sat)
-										+rowElementEdit('15','sun', 7, member.sun)
-									tr
-										th(scope='row') 4:00 pm
-										+rowElementEdit('16','mon', 8, member.mon)
-										+rowElementEdit('16','tue', 8, member.tue) 
-										+rowElementEdit('16','wed', 8, member.wed) 
-										+rowElementEdit('16','thu', 8, member.thu) 
-										+rowElementEdit('16','fri', 8, member.fri)
-										+rowElementEdit('16','sat', 8, member.sat)
-										+rowElementEdit('16','sun', 8, member.sun)
-									tr
-									tr
-										th(scope='row') 5:00 pm
-										+rowElementEdit('17','mon', 9, member.mon)
-										+rowElementEdit('17','tue', 9, member.tue) 
-										+rowElementEdit('17','wed', 9, member.wed) 
-										+rowElementEdit('17','thu', 9, member.thu) 
-										+rowElementEdit('17','fri', 9, member.fri)
-										+rowElementEdit('17','sat', 9, member.sat)
-										+rowElementEdit('17','sun', 9, member.sun)
-									tr
-										th(scope='row') 6:00 pm
-										+rowElementEdit('18','mon', 10, member.mon)
-										+rowElementEdit('18','tue', 10, member.tue) 
-										+rowElementEdit('18','wed', 10, member.wed) 
-										+rowElementEdit('18','thu', 10, member.thu) 
-										+rowElementEdit('18','fri', 10, member.fri)
-										+rowElementEdit('18','sat', 10, member.sat)
-										+rowElementEdit('18','sun', 10, member.sun)
-									tr
-										th(scope='row') 7:00 pm
-										+rowElementEdit('19','mon', 11, member.mon)
-										+rowElementEdit('19','tue', 11, member.tue) 
-										+rowElementEdit('19','wed', 11, member.wed) 
-										+rowElementEdit('19','thu', 11, member.thu) 
-										+rowElementEdit('19','fri', 11, member.fri)
-										+rowElementEdit('19','sat', 11, member.sat)
-										+rowElementEdit('19','sun', 11, member.sun)
-									tr
-										th(scope='row') 8:00 pm
-										+rowElementEdit('20','mon', 12, member.mon)
-										+rowElementEdit('20','tue', 12, member.tue) 
-										+rowElementEdit('20','wed', 12, member.wed) 
-										+rowElementEdit('20','thu', 12, member.thu) 
-										+rowElementEdit('20','fri', 12, member.fri)
-										+rowElementEdit('20','sat', 12, member.sat)
-										+rowElementEdit('20','sun', 12, member.sun)
-									tr
-										th(scope='row') 9:00 pm 
-										+rowElementEdit('21','mon', 13, member.mon)
-										+rowElementEdit('21','tue', 13, member.tue) 
-										+rowElementEdit('21','wed', 13, member.wed) 
-										+rowElementEdit('21','thu', 13, member.thu) 
-										+rowElementEdit('21','fri', 13, member.fri)
-										+rowElementEdit('21','sat', 13, member.sat)
-										+rowElementEdit('21','sun', 13, member.sun)
-									tr
-										th(scope='row') 10:00 pm
-										+rowElementEdit('22','mon', 14, member.mon)
-										+rowElementEdit('22','tue', 14, member.tue) 
-										+rowElementEdit('22','wed', 14, member.wed) 
-										+rowElementEdit('22','thu', 14, member.thu) 
-										+rowElementEdit('22','fri', 14, member.fri)
-										+rowElementEdit('22','sat', 14, member.sat)
-										+rowElementEdit('22','sun', 14, member.sun)
-									tr
-										th(scope='row') 11:00 pm
-										+rowElementEdit('23','mon', 15, member.mon)
-										+rowElementEdit('23','tue', 15, member.tue) 
-										+rowElementEdit('23','wed', 15, member.wed) 
-										+rowElementEdit('23','thu', 15, member.thu) 
-										+rowElementEdit('23','fri', 15, member.fri)
-										+rowElementEdit('23','sat', 15, member.sat)
-										+rowElementEdit('23','sun', 15, member.sun)
-
-				label(for='submit') Confirm Member Availability Changes
-				button.btn.btn-outline-info(type='submit' form='updateform', id='submit')
+					+editmemstep1(member)
+					+editmemstep2(member)
+				
 			.option-select 
+				button.btn.btn-outline-info(type='submit' form='updateform', id='submit') Confirm Member Availability Changes
 				form.option-row(action='/')
-							input.btn.btn-outline-info(type='submit' value='Go to Home')
+					input.btn.btn-outline-info(type='submit' value='Go to Home')
 
 		// Jquery Script for Bootstrap
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
@@ -193,3 +40,4 @@ html
 		// Table click Javascript 
 		script
 			include table.js
+			include editmem.js

@@ -20,3 +20,26 @@
   availabilities at a time. Thus we will recalculate the availabilities 
   each time. 
 - Basic find has been implemented. 
+
+------------------------------------------------------------------------
+< 09/07/18 mon 12:46 pm >
+
+- It is time for a patch. Going to try to update the add member process
+  so that there are 3 sepearate stages: add name, add face to face avail,
+  and add non face to face avail. 
+
+------------------------------------------------------------------------
+< 10/07/18 tue 01:20 pm >
+
+- Add name has been converted to a 3 step process. Added javascript to 
+  transition smoothly between them. Changed the colours for face to face
+  and online availabilities to distinguish between which one is being
+  filled in. 
+
+------------------------------------------------------------------------
+< 12/07/18 thu 12:02 pm >
+
+- Edit mem also needs to be converted so that both availabilities can be 
+  edited and switched between using javascript. 
+- Did some clean up of code for app.js.
+- Edit member now displays correctly.

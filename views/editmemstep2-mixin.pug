@@ -1,0 +1,161 @@
+mixin editmemstep2(member)
+	.editmemstep2
+		table.table.table-bordered
+			thead
+				tr
+					th(scope='col')
+					th(scope='col') Mon
+					th(scope='col') Tue
+					th(scope='col') Wed
+					th(scope='col') Thu
+					th(scope='col') Fri
+					th(scope='col') Sat
+					th(scope='col') Sun
+
+			tbody 
+				tr
+					th(scope='row') 8:00 am
+					+rowElementEditNF('8','mon', 0, member.monNF)
+					+rowElementEditNF('8','tue', 0, member.tueNF) 
+					+rowElementEditNF('8','wed', 0, member.wedNF) 
+					+rowElementEditNF('8','thu', 0, member.thuNF) 
+					+rowElementEditNF('8','fri', 0, member.friNF)
+					+rowElementEditNF('8','sat', 0, member.satNF)
+					+rowElementEditNF('8','sun', 0, member.sunNF)
+				tr
+					th(scope='row') 9:00 am
+					+rowElementEditNF('9','mon', 1, member.monNF)
+					+rowElementEditNF('9','tue', 1, member.tueNF) 
+					+rowElementEditNF('9','wed', 1, member.wedNF) 
+					+rowElementEditNF('9','thu', 1, member.thuNF) 
+					+rowElementEditNF('9','fri', 1, member.friNF)
+					+rowElementEditNF('9','sat', 1, member.satNF)
+					+rowElementEditNF('9','sun', 1, member.sunNF)
+				tr
+					th(scope='row') 10:00 am
+					+rowElementEditNF('10','mon', 2, member.monNF)
+					+rowElementEditNF('10','tue', 2, member.tueNF) 
+					+rowElementEditNF('10','wed', 2, member.wedNF) 
+					+rowElementEditNF('10','thu', 2, member.thuNF) 
+					+rowElementEditNF('10','fri', 2, member.friNF)
+					+rowElementEditNF('10','sat', 2, member.satNF)
+					+rowElementEditNF('10','sun', 2, member.sunNF)
+				tr
+					th(scope='row') 11:00 am
+					+rowElementEditNF('11','mon', 3, member.monNF)
+					+rowElementEditNF('11','tue', 3, member.tueNF) 
+					+rowElementEditNF('11','wed', 3, member.wedNF) 
+					+rowElementEditNF('11','thu', 3, member.thuNF) 
+					+rowElementEditNF('11','fri', 3, member.friNF)
+					+rowElementEditNF('11','sat', 3, member.satNF)
+					+rowElementEditNF('11','sun', 3, member.sunNF)
+				tr
+					th(scope='row') 12:00 pm
+					+rowElementEditNF('12','mon', 4, member.monNF)
+					+rowElementEditNF('12','tue', 4, member.tueNF) 
+					+rowElementEditNF('12','wed', 4, member.wedNF) 
+					+rowElementEditNF('12','thu', 4, member.thuNF) 
+					+rowElementEditNF('12','fri', 4, member.friNF)
+					+rowElementEditNF('12','sat', 4, member.satNF)
+					+rowElementEditNF('12','sun', 4, member.sunNF)
+				tr
+					th(scope='row') 1:00 pm
+					+rowElementEditNF('13','mon', 5, member.monNF)
+					+rowElementEditNF('13','tue', 5, member.tueNF) 
+					+rowElementEditNF('13','wed', 5, member.wedNF) 
+					+rowElementEditNF('13','thu', 5, member.thuNF) 
+					+rowElementEditNF('13','fri', 5, member.friNF)
+					+rowElementEditNF('13','sat', 5, member.satNF)
+					+rowElementEditNF('13','sun', 5, member.sunNF)
+				tr
+					th(scope='row') 2:00 pm
+					+rowElementEditNF('14','mon', 6, member.monNF)
+					+rowElementEditNF('14','tue', 6, member.tueNF) 
+					+rowElementEditNF('14','wed', 6, member.wedNF) 
+					+rowElementEditNF('14','thu', 6, member.thuNF) 
+					+rowElementEditNF('14','fri', 6, member.friNF)
+					+rowElementEditNF('14','sat', 6, member.satNF)
+					+rowElementEditNF('14','sun', 6, member.sunNF)
+				tr
+					th(scope='row') 3:00 pm
+					+rowElementEditNF('15','mon', 7, member.monNF)
+					+rowElementEditNF('15','tue', 7, member.tueNF) 
+					+rowElementEditNF('15','wed', 7, member.wedNF) 
+					+rowElementEditNF('15','thu', 7, member.thuNF) 
+					+rowElementEditNF('15','fri', 7, member.friNF)
+					+rowElementEditNF('15','sat', 7, member.satNF)
+					+rowElementEditNF('15','sun', 7, member.sunNF)
+				tr
+					th(scope='row') 4:00 pm
+					+rowElementEditNF('16','mon', 8, member.monNF)
+					+rowElementEditNF('16','tue', 8, member.tueNF) 
+					+rowElementEditNF('16','wed', 8, member.wedNF) 
+					+rowElementEditNF('16','thu', 8, member.thuNF) 
+					+rowElementEditNF('16','fri', 8, member.friNF)
+					+rowElementEditNF('16','sat', 8, member.satNF)
+					+rowElementEditNF('16','sun', 8, member.sunNF)
+				tr
+					th(scope='row') 5:00 pm
+					+rowElementEditNF('17','mon', 9, member.monNF)
+					+rowElementEditNF('17','tue', 9, member.tueNF) 
+					+rowElementEditNF('17','wed', 9, member.wedNF) 
+					+rowElementEditNF('17','thu', 9, member.thuNF) 
+					+rowElementEditNF('17','fri', 9, member.friNF)
+					+rowElementEditNF('17','sat', 9, member.satNF)
+					+rowElementEditNF('17','sun', 9, member.sunNF)
+				tr
+					th(scope='row') 6:00 pm
+					+rowElementEditNF('18','mon', 10, member.monNF)
+					+rowElementEditNF('18','tue', 10, member.tueNF) 
+					+rowElementEditNF('18','wed', 10, member.wedNF) 
+					+rowElementEditNF('18','thu', 10, member.thuNF) 
+					+rowElementEditNF('18','fri', 10, member.friNF)
+					+rowElementEditNF('18','sat', 10, member.satNF)
+					+rowElementEditNF('18','sun', 10, member.sunNF)
+				tr
+					th(scope='row') 7:00 pm
+					+rowElementEditNF('19','mon', 11, member.monNF)
+					+rowElementEditNF('19','tue', 11, member.tueNF) 
+					+rowElementEditNF('19','wed', 11, member.wedNF) 
+					+rowElementEditNF('19','thu', 11, member.thuNF) 
+					+rowElementEditNF('19','fri', 11, member.friNF)
+					+rowElementEditNF('19','sat', 11, member.satNF)
+					+rowElementEditNF('19','sun', 11, member.sunNF)
+				tr
+					th(scope='row') 8:00 pm
+					+rowElementEditNF('20','mon', 12, member.monNF)
+					+rowElementEditNF('20','tue', 12, member.tueNF) 
+					+rowElementEditNF('20','wed', 12, member.wedNF) 
+					+rowElementEditNF('20','thu', 12, member.thuNF) 
+					+rowElementEditNF('20','fri', 12, member.friNF)
+					+rowElementEditNF('20','sat', 12, member.satNF)
+					+rowElementEditNF('20','sun', 12, member.sunNF)
+				tr
+					th(scope='row') 9:00 pm 
+					+rowElementEditNF('21','mon', 13, member.monNF)
+					+rowElementEditNF('21','tue', 13, member.tueNF) 
+					+rowElementEditNF('21','wed', 13, member.wedNF) 
+					+rowElementEditNF('21','thu', 13, member.thuNF) 
+					+rowElementEditNF('21','fri', 13, member.friNF)
+					+rowElementEditNF('21','sat', 13, member.satNF)
+					+rowElementEditNF('21','sun', 13, member.sunNF)
+				tr
+					th(scope='row') 10:00 pm
+					+rowElementEditNF('22','mon', 14, member.monNF)
+					+rowElementEditNF('22','tue', 14, member.tueNF) 
+					+rowElementEditNF('22','wed', 14, member.wedNF) 
+					+rowElementEditNF('22','thu', 14, member.thuNF) 
+					+rowElementEditNF('22','fri', 14, member.friNF)
+					+rowElementEditNF('22','sat', 14, member.satNF)
+					+rowElementEditNF('22','sun', 14, member.sunNF)
+				tr
+					th(scope='row') 11:00 pm
+					+rowElementEditNF('23','mon', 15, member.monNF)
+					+rowElementEditNF('23','tue', 15, member.tueNF) 
+					+rowElementEditNF('23','wed', 15, member.wedNF) 
+					+rowElementEditNF('23','thu', 15, member.thuNF) 
+					+rowElementEditNF('23','fri', 15, member.friNF)
+					+rowElementEditNF('23','sat', 15, member.satNF)
+					+rowElementEditNF('23','sun', 15, member.sunNF)
+		.option-select
+			button.btn.btn-outline-success.step2bck(type='button') Change Face to Face Availabilities

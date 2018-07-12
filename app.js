@@ -10,13 +10,20 @@ mongoose.connect("mongodb://localhost/hr_app");
 
 var memberSchema = new mongoose.Schema({
 	name: String,
-	mon: [Number],
-	tue: [Number],
-	wed: [Number],
-	thu: [Number],
-	fri: [Number],
-	sat: [Number],
-	sun: [Number]
+	monF: [Number],
+	tueF: [Number],
+	wedF: [Number],
+	thuF: [Number],
+	friF: [Number],
+	satF: [Number],
+	sunF: [Number],
+	monNF: [Number],
+	tueNF: [Number],
+	wedNF: [Number],
+	thuNF: [Number],
+	friNF: [Number],
+	satNF: [Number],
+	sunNF: [Number]
 })
 
 var Member = mongoose.model("Member", memberSchema);
@@ -39,35 +46,44 @@ app.get('/add', function (req, res) {
 app.post('/add/submit', function (req, res) {
 	// Process form submission
 	// Fill Schema
-	var name; 
-	var mon = [];
-	var tue = [];
-	var wed = [];
-	var thu = [];
-	var fri = [];
-	var sat = [];
-	var sun = [];
+
+	// dayF corresponds to being free for face to face meeting.
+	// dayNF corresponds to being free online only. 
 
 	// We are going to create the array of timeslots for each day. 
 	// Should try to find a cleaner way to implement this in future.  
-	name = req.body.name;
-	mon = extractTimes (req.body.mon);
-	tue = extractTimes (req.body.tue);
-	wed = extractTimes (req.body.wed);
-	thu = extractTimes (req.body.thu);
-	fri = extractTimes (req.body.fri);
-	sat = extractTimes (req.body.sat);
-	sun = extractTimes (req.body.sun);
+	var name = req.body.name;
+	var monF = extractTimes (req.body.monF);
+	var tueF = extractTimes (req.body.tueF);
+	var wedF = extractTimes (req.body.wedF);
+	var thuF = extractTimes (req.body.thuF);
+	var friF = extractTimes (req.body.friF);
+	var satF = extractTimes (req.body.satF);
+	var sunF = extractTimes (req.body.sunF);
+	var monNF = extractTimes (req.body.monNF);
+	var tueNF = extractTimes (req.body.tueNF);
+	var wedNF = extractTimes (req.body.wedNF);
+	var thuNF = extractTimes (req.body.thuNF);
+	var friNF = extractTimes (req.body.friNF);
+	var satNF = extractTimes (req.body.satNF);
+	var sunNF = extractTimes (req.body.sunNF);
 
 	var newMember = new Member({
 		name: name,
-		mon: mon,
-		tue: tue,
-		wed: wed,
-		thu: thu,
-		fri: fri,
-		sat: sat,
-		sun: sun
+		monF: monF,
+		tueF: tueF,
+		wedF: wedF,
+		thuF: thuF,
+		friF: friF,
+		satF: satF,
+		sunF: sunF,
+		monNF: monNF,
+		tueNF: tueNF,
+		wedNF: wedNF,
+		thuNF: thuNF,
+		friNF: friNF,
+		satNF: satNF,
+		sunNF: sunNF
 	});
 
 	// Attempt to save to database 
@@ -75,7 +91,7 @@ app.post('/add/submit', function (req, res) {
 		if(err) {
 			console.log("SOMETHING WENT WRONG!");
 		} else {
-			console.log("success!");
+			console.log("sucessful save!");
 		}
 	});
 	res.redirect('/');
@@ -98,52 +114,59 @@ app.get('/edit/:id', function(req, res){
 		if (err) {
 			console.log("FAILURE: Could not load the member to edit.");
 		} else {
-			console.log(member);
 			res.render('editmem', {member, member});
 		}
 	});
 });
 app.post('/edit/:id', function(req, res){
-	console.log("You want to edit the id "+req.params.id);
+	console.log("You want to edit the id "+ req.params.id);
 
 	// Process form submission
 	// Fill Schema
-	var name; 
-	var mon = [];
-	var tue = [];
-	var wed = [];
-	var thu = [];
-	var fri = [];
-	var sat = [];
-	var sun = [];
 
 	Member.findById(req.params.id, function(err, member) {
 		if (err) {
 			console.log("FAILURE: Could not find requested member to edit");
 		} else {
 			// As explained above for CREATE
-			mon = extractTimes (req.body.mon);
-			tue = extractTimes (req.body.tue);
-			wed = extractTimes (req.body.wed);
-			thu = extractTimes (req.body.thu);
-			fri = extractTimes (req.body.fri);
-			sat = extractTimes (req.body.sat);
-			sun = extractTimes (req.body.sun);
+			var monF = extractTimes (req.body.monF);
+			var tueF = extractTimes (req.body.tueF);
+			var wedF = extractTimes (req.body.wedF);
+			var thuF = extractTimes (req.body.thuF);
+			var friF = extractTimes (req.body.friF);
+			var satF = extractTimes (req.body.satF);
+			var sunF = extractTimes (req.body.sunF);
+			var monNF = extractTimes (req.body.monNF);
+			var tueNF = extractTimes (req.body.tueNF);
+			var wedNF = extractTimes (req.body.wedNF);
+			var thuNF = extractTimes (req.body.thuNF);
+			var friNF = extractTimes (req.body.friNF);
+			var satNF = extractTimes (req.body.satNF);
+			var sunNF = extractTimes (req.body.sunNF);
 
 			member.set({
-				mon: mon,
-				tue: tue,
-				wed: wed,
-				thu: thu,
-				fri: fri,
-				sat: sat,
-				sun: sun		
+				monF: monF,
+				tueF: tueF,
+				wedF: wedF,
+				thuF: thuF,
+				friF: friF,
+				satF: satF,
+				sunF: sunF,
+				monNF: monNF,
+				tueNF: tueNF,
+				wedNF: wedNF,
+				thuNF: thuNF,
+				friNF: friNF,
+				satNF: satNF,
+				sunNF: sunNF			
 			});
 		}
 		member.save(function (err, updatedMember) {
+		console.log("Stronk edits")
 		if (err) {
 			console.log("I failed to save new data");
 		} else {
+			console.log(updatedMember);
 			res.render('editmem', {member: updatedMember, success: 1});
 		}
 	});
