@@ -1,0 +1,8 @@
+mixin rowElementAllPresent(reqmems, maxmems, day, index)
+	var true = 1 
+	each val in reqmems 
+		true = true * reqmems[day][index]
+	if (true)
+		td.allpresent
+	else 
+		td

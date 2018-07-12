@@ -179,7 +179,7 @@ app.get('/find', function (req, res) {
 		if (err) {
 			console.log("I couldn't find anything");
 		} else {
-			res.render('find', {members, members});
+			res.render('find', {members:members});
 		}
 	});
 });
@@ -198,7 +198,8 @@ app.post('/find/display', function (req, res) {
 			console.log("Something went wrong with displaying members");
 		} else {
 	     	console.log(reqmems);
-	 		res.render('display', {reqmems:reqmems});
+	     	console.log(array.length);
+	 		res.render('display', {reqmems:reqmems, maxmems: array.length});
  		}
 	});
 	

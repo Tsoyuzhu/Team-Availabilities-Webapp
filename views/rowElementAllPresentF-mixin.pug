@@ -1,0 +1,18 @@
+mixin rowElementAllPresentF(reqmems, maxmems, day, index)
+	- var all = 1;
+	each val in reqmems 
+		all = all * val[day][index]
+
+	if (all === 1)
+		td.allpresentF
+			ul 
+				each val in reqmems
+					+rowElementDisplay(0, val[day], val.name)
+
+	else 
+		td
+			ul 
+				each val in reqmems
+					+rowElementDisplay(0, val[day], val.name)
+				p #{maxmems}
+				p #{all}

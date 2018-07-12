@@ -1,0 +1,498 @@
+mixin displaytableNF(reqmems, maxmems)
+	.displaytableNF
+		.option-select
+			h3 Online Availabilities 
+			table.table.table-bordered
+				thead
+					tr
+						th(scope='col')
+						th(scope='col') Mon
+						th(scope='col') Tue
+						th(scope='col') Wed
+						th(scope='col') Thu
+						th(scope='col') Fri
+						th(scope='col') Sat
+						th(scope='col') Sun
+				tbody 
+					tr
+						th(scope='row') 8:00 am
+							td
+								ul 
+								each val in reqmems
+									+rowElementDisplay(0, val.monNF, val.name)
+							td
+								ul
+								each val in reqmems
+									+rowElementDisplay(0, val.tueNF, val.name)
+							td
+								ul
+								each val in reqmems
+									+rowElementDisplay(0, val.wedNF, val.name)
+							td
+								ul
+								each val in reqmems
+									+rowElementDisplay(0, val.thuNF, val.name)
+							td
+								ul
+								each val in reqmems
+									+rowElementDisplay(0, val.friNF, val.name)
+							td
+								ul
+								each val in reqmems
+									+rowElementDisplay(0, val.satNF, val.name)
+							td
+								ul
+								each val in reqmems
+									+rowElementDisplay(0, val.sunNF, val.name)
+					tr
+						th(scope='row') 9:00 am
+							td
+								ul 
+								each val in reqmems
+									+rowElementDisplay(1, val.monNF, val.name)
+							td
+								ul
+								each val in reqmems
+									+rowElementDisplay(1, val.tueNF, val.name)
+							td
+								ul
+								each val in reqmems
+									+rowElementDisplay(1, val.wedNF, val.name)
+							td
+								ul
+								each val in reqmems
+									+rowElementDisplay(1, val.thuNF, val.name)
+							td
+								ul
+								each val in reqmems
+									+rowElementDisplay(1, val.friNF, val.name)
+							td
+								ul
+								each val in reqmems
+									+rowElementDisplay(1, val.satNF, val.name)
+							td
+								ul
+								each val in reqmems
+									+rowElementDisplay(1, val.sunNF, val.name)
+					tr
+						th(scope='row') 10:00 am
+							td
+								ul 
+									each val in reqmems
+										+rowElementDisplay(2, val.monNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(2, val.tueNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(2, val.wedNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(2, val.thuNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(2, val.friNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(2, val.satNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(2, val.sunNF, val.name)
+					tr
+						th(scope='row') 11:00 am
+							td
+								ul 
+									each val in reqmems
+										+rowElementDisplay(3, val.monNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(3, val.tueNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(3, val.wedNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(3, val.thuNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(3, val.friNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(3, val.satNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(3, val.sunNF, val.name)
+					
+					tr
+						th(scope='row') 12:00 pm
+							td
+								ul 
+									each val in reqmems
+										+rowElementDisplay(4, val.monNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(4, val.tueNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(4, val.wedNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(4, val.thuNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(4, val.friNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(4, val.satNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(4, val.sunNF, val.name)
+					tr
+						th(scope='row') 1:00 pm
+							td
+								ul 
+									each val in reqmems
+										+rowElementDisplay(5, val.monNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(5, val.tueNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(5, val.wedNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(5, val.thuNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(5, val.friNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(5, val.satNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(5, val.sunNF, val.name)
+					tr
+						th(scope='row') 2:00 pm
+							td
+								ul 
+									each val in reqmems
+										+rowElementDisplay(6, val.monNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(6, val.tueNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(6, val.wedNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(6, val.thuNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(6, val.friNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(6, val.satNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(6, val.sunNF, val.name)
+					tr
+						th(scope='row') 3:00 pm
+							td
+								ul 
+									each val in reqmems
+										+rowElementDisplay(7, val.monNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(7, val.tueNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(7, val.wedNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(7, val.thuNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(7, val.friNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(7, val.satNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(7, val.sunNF, val.name)
+					tr
+						th(scope='row') 4:00 pm
+							td
+								ul 
+									each val in reqmems
+										+rowElementDisplay(8, val.monNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(8, val.tueNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(8, val.wedNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(8, val.thuNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(8, val.friNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(8, val.satNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(8, val.sunNF, val.name)
+					tr
+						th(scope='row') 5:00 pm
+							td
+								ul 
+									each val in reqmems
+										+rowElementDisplay(9, val.monNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(9, val.tueNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(9, val.wedNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(9, val.thuNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(9, val.friNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(9, val.satNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(9, val.sunNF, val.name)
+					tr
+						th(scope='row') 6:00 pm
+							td
+								ul 
+									each val in reqmems
+										+rowElementDisplay(10, val.monNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(10, val.tueNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(10, val.wedNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(10, val.thuNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(10, val.friNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(10, val.satNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(10, val.sunNF, val.name)
+					tr
+						th(scope='row') 7:00 pm
+							td
+									ul 
+									each val in reqmems
+										+rowElementDisplay(11, val.monNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(11, val.tueNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(11, val.wedNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(11, val.thuNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(11, val.friNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(11, val.satNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(11, val.sunNF, val.name)
+					tr
+						th(scope='row') 8:00 pm
+							td
+								ul 
+									each val in reqmems
+										+rowElementDisplay(12, val.monNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(12, val.tueNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(12, val.wedNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(12, val.thuNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(12, val.friNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(12, val.satNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(12, val.sunNF, val.name)
+					tr
+						th(scope='row') 9:00 pm
+							td
+								ul 
+									each val in reqmems
+										+rowElementDisplay(13, val.monNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(13, val.tueNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(13, val.wedNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(13, val.thuNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(13, val.friNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(13, val.satNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(13, val.sunNF, val.name)
+					tr
+						th(scope='row') 10:00 pm 
+							td
+								ul 
+									each val in reqmems
+										+rowElementDisplay(14, val.monNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(14, val.tueNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(14, val.wedNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(14, val.thuNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(14, val.friNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(14, val.satNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(14, val.sunNF, val.name)
+					tr
+						th(scope='row') 11:00 pm
+							td
+								ul 
+									each val in reqmems
+										+rowElementDisplay(15, val.monNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(15, val.tueNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(15, val.wedNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(15, val.thuNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(15, val.friNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(15, val.satNF, val.name)
+							td
+								ul
+									each val in reqmems
+										+rowElementDisplay(15, val.sunNF, val.name)
+			button.btn.btn-outline-warning.step2bck(type='button') Show Face to Face Availabilities
