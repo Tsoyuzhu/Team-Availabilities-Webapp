@@ -50,3 +50,6 @@
 - Display needs to highlight the table cells where all members are present.
 - Created an object allPresent, and a function to extract the key value pairs
   of this object in order to implement this functionality. 
+- Also need to fix some bugs. App breaks when receiveing a request to display
+  the availabilities of no members. Members should not enter a name which 
+  already exists but this will not break the app.

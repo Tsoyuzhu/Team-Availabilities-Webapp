@@ -179,7 +179,7 @@ app.get('/find', function (req, res) {
 		if (err) {
 			console.log("I couldn't find anything");
 		} else {
-			res.render('find', {members:members});
+			res.render('find', {members:members, success:1});
 		}
 	});
 });
@@ -192,6 +192,12 @@ app.post('/find/display', function (req, res) {
 			array.push( mongoose.Types.ObjectId(key) );
 		}
 	};
+	// Check for no members selected
+	if (array.length == 0) {
+		// Bit of a poor solution. 
+		// Should implement something more graceful in future. 
+		return res.render('index', {success:-1})
+	}
 	//console.log(array);	
 	Member.find({'_id': { $in: array} }, function(err, reqmems){
 		if (err) {
