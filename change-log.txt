@@ -43,3 +43,10 @@
   edited and switched between using javascript. 
 - Did some clean up of code for app.js.
 - Edit member now displays correctly.
+
+------------------------------------------------------------------------
+< 16/07/18 mon 01:13 pm >
+
+- Display needs to highlight the table cells where all members are present.
+- Created an object allPresent, and a function to extract the key value pairs
+  of this object in order to implement this functionality. 

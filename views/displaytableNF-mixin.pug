@@ -16,483 +16,146 @@ mixin displaytableNF(reqmems, maxmems)
 				tbody 
 					tr
 						th(scope='row') 8:00 am
-							td
-								ul 
-								each val in reqmems
-									+rowElementDisplay(0, val.monNF, val.name)
-							td
-								ul
-								each val in reqmems
-									+rowElementDisplay(0, val.tueNF, val.name)
-							td
-								ul
-								each val in reqmems
-									+rowElementDisplay(0, val.wedNF, val.name)
-							td
-								ul
-								each val in reqmems
-									+rowElementDisplay(0, val.thuNF, val.name)
-							td
-								ul
-								each val in reqmems
-									+rowElementDisplay(0, val.friNF, val.name)
-							td
-								ul
-								each val in reqmems
-									+rowElementDisplay(0, val.satNF, val.name)
-							td
-								ul
-								each val in reqmems
-									+rowElementDisplay(0, val.sunNF, val.name)
+							+rowElementAllPresentNF(reqmems,allPresent,'monNF',0)
+							+rowElementAllPresentNF(reqmems,allPresent,'tueNF',0)
+							+rowElementAllPresentNF(reqmems,allPresent,'wedNF',0)
+							+rowElementAllPresentNF(reqmems,allPresent,'thuNF',0)
+							+rowElementAllPresentNF(reqmems,allPresent,'friNF',0)
+							+rowElementAllPresentNF(reqmems,allPresent,'satNF',0)
+							+rowElementAllPresentNF(reqmems,allPresent,'sunNF',0)
 					tr
 						th(scope='row') 9:00 am
-							td
-								ul 
-								each val in reqmems
-									+rowElementDisplay(1, val.monNF, val.name)
-							td
-								ul
-								each val in reqmems
-									+rowElementDisplay(1, val.tueNF, val.name)
-							td
-								ul
-								each val in reqmems
-									+rowElementDisplay(1, val.wedNF, val.name)
-							td
-								ul
-								each val in reqmems
-									+rowElementDisplay(1, val.thuNF, val.name)
-							td
-								ul
-								each val in reqmems
-									+rowElementDisplay(1, val.friNF, val.name)
-							td
-								ul
-								each val in reqmems
-									+rowElementDisplay(1, val.satNF, val.name)
-							td
-								ul
-								each val in reqmems
-									+rowElementDisplay(1, val.sunNF, val.name)
+							+rowElementAllPresentNF(reqmems,allPresent,'monNF',1)
+							+rowElementAllPresentNF(reqmems,allPresent,'tueNF',1)
+							+rowElementAllPresentNF(reqmems,allPresent,'wedNF',1)
+							+rowElementAllPresentNF(reqmems,allPresent,'thuNF',1)
+							+rowElementAllPresentNF(reqmems,allPresent,'friNF',1)
+							+rowElementAllPresentNF(reqmems,allPresent,'satNF',1)
+							+rowElementAllPresentNF(reqmems,allPresent,'sunNF',1)
 					tr
 						th(scope='row') 10:00 am
-							td
-								ul 
-									each val in reqmems
-										+rowElementDisplay(2, val.monNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(2, val.tueNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(2, val.wedNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(2, val.thuNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(2, val.friNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(2, val.satNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(2, val.sunNF, val.name)
+							+rowElementAllPresentNF(reqmems,allPresent,'monNF',2)
+							+rowElementAllPresentNF(reqmems,allPresent,'tueNF',2)
+							+rowElementAllPresentNF(reqmems,allPresent,'wedNF',2)
+							+rowElementAllPresentNF(reqmems,allPresent,'thuNF',2)
+							+rowElementAllPresentNF(reqmems,allPresent,'friNF',2)
+							+rowElementAllPresentNF(reqmems,allPresent,'satNF',2)
+							+rowElementAllPresentNF(reqmems,allPresent,'sunNF',2)
 					tr
 						th(scope='row') 11:00 am
-							td
-								ul 
-									each val in reqmems
-										+rowElementDisplay(3, val.monNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(3, val.tueNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(3, val.wedNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(3, val.thuNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(3, val.friNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(3, val.satNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(3, val.sunNF, val.name)
-					
+							+rowElementAllPresentNF(reqmems,allPresent,'monNF',3)
+							+rowElementAllPresentNF(reqmems,allPresent,'tueNF',3)
+							+rowElementAllPresentNF(reqmems,allPresent,'wedNF',3)
+							+rowElementAllPresentNF(reqmems,allPresent,'thuNF',3)
+							+rowElementAllPresentNF(reqmems,allPresent,'friNF',3)
+							+rowElementAllPresentNF(reqmems,allPresent,'satNF',3)
+							+rowElementAllPresentNF(reqmems,allPresent,'sunNF',3)
 					tr
 						th(scope='row') 12:00 pm
-							td
-								ul 
-									each val in reqmems
-										+rowElementDisplay(4, val.monNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(4, val.tueNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(4, val.wedNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(4, val.thuNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(4, val.friNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(4, val.satNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(4, val.sunNF, val.name)
+							+rowElementAllPresentNF(reqmems,allPresent,'monNF',4)
+							+rowElementAllPresentNF(reqmems,allPresent,'tueNF',4)
+							+rowElementAllPresentNF(reqmems,allPresent,'wedNF',4)
+							+rowElementAllPresentNF(reqmems,allPresent,'thuNF',4)
+							+rowElementAllPresentNF(reqmems,allPresent,'friNF',4)
+							+rowElementAllPresentNF(reqmems,allPresent,'satNF',4)
+							+rowElementAllPresentNF(reqmems,allPresent,'sunNF',4)
 					tr
 						th(scope='row') 1:00 pm
-							td
-								ul 
-									each val in reqmems
-										+rowElementDisplay(5, val.monNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(5, val.tueNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(5, val.wedNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(5, val.thuNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(5, val.friNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(5, val.satNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(5, val.sunNF, val.name)
+							+rowElementAllPresentNF(reqmems,allPresent,'monNF',5)
+							+rowElementAllPresentNF(reqmems,allPresent,'tueNF',5)
+							+rowElementAllPresentNF(reqmems,allPresent,'wedNF',5)
+							+rowElementAllPresentNF(reqmems,allPresent,'thuNF',5)
+							+rowElementAllPresentNF(reqmems,allPresent,'friNF',5)
+							+rowElementAllPresentNF(reqmems,allPresent,'satNF',5)
+							+rowElementAllPresentNF(reqmems,allPresent,'sunNF',5)
 					tr
 						th(scope='row') 2:00 pm
-							td
-								ul 
-									each val in reqmems
-										+rowElementDisplay(6, val.monNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(6, val.tueNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(6, val.wedNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(6, val.thuNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(6, val.friNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(6, val.satNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(6, val.sunNF, val.name)
+							+rowElementAllPresentNF(reqmems,allPresent,'monNF',6)
+							+rowElementAllPresentNF(reqmems,allPresent,'tueNF',6)
+							+rowElementAllPresentNF(reqmems,allPresent,'wedNF',6)
+							+rowElementAllPresentNF(reqmems,allPresent,'thuNF',6)
+							+rowElementAllPresentNF(reqmems,allPresent,'friNF',6)
+							+rowElementAllPresentNF(reqmems,allPresent,'satNF',6)
+							+rowElementAllPresentNF(reqmems,allPresent,'sunNF',6)
 					tr
 						th(scope='row') 3:00 pm
-							td
-								ul 
-									each val in reqmems
-										+rowElementDisplay(7, val.monNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(7, val.tueNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(7, val.wedNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(7, val.thuNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(7, val.friNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(7, val.satNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(7, val.sunNF, val.name)
+							+rowElementAllPresentNF(reqmems,allPresent,'monNF',7)
+							+rowElementAllPresentNF(reqmems,allPresent,'tueNF',7)
+							+rowElementAllPresentNF(reqmems,allPresent,'wedNF',7)
+							+rowElementAllPresentNF(reqmems,allPresent,'thuNF',7)
+							+rowElementAllPresentNF(reqmems,allPresent,'friNF',7)
+							+rowElementAllPresentNF(reqmems,allPresent,'satNF',7)
+							+rowElementAllPresentNF(reqmems,allPresent,'sunNF',7)
 					tr
 						th(scope='row') 4:00 pm
-							td
-								ul 
-									each val in reqmems
-										+rowElementDisplay(8, val.monNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(8, val.tueNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(8, val.wedNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(8, val.thuNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(8, val.friNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(8, val.satNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(8, val.sunNF, val.name)
+							+rowElementAllPresentNF(reqmems,allPresent,'monNF',8)
+							+rowElementAllPresentNF(reqmems,allPresent,'tueNF',8)
+							+rowElementAllPresentNF(reqmems,allPresent,'wedNF',8)
+							+rowElementAllPresentNF(reqmems,allPresent,'thuNF',8)
+							+rowElementAllPresentNF(reqmems,allPresent,'friNF',8)
+							+rowElementAllPresentNF(reqmems,allPresent,'satNF',8)
+							+rowElementAllPresentNF(reqmems,allPresent,'sunNF',8)
 					tr
 						th(scope='row') 5:00 pm
-							td
-								ul 
-									each val in reqmems
-										+rowElementDisplay(9, val.monNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(9, val.tueNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(9, val.wedNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(9, val.thuNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(9, val.friNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(9, val.satNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(9, val.sunNF, val.name)
+							+rowElementAllPresentNF(reqmems,allPresent,'monNF',9)
+							+rowElementAllPresentNF(reqmems,allPresent,'tueNF',9)
+							+rowElementAllPresentNF(reqmems,allPresent,'wedNF',9)
+							+rowElementAllPresentNF(reqmems,allPresent,'thuNF',9)
+							+rowElementAllPresentNF(reqmems,allPresent,'friNF',9)
+							+rowElementAllPresentNF(reqmems,allPresent,'satNF',9)
+							+rowElementAllPresentNF(reqmems,allPresent,'sunNF',9)
 					tr
 						th(scope='row') 6:00 pm
-							td
-								ul 
-									each val in reqmems
-										+rowElementDisplay(10, val.monNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(10, val.tueNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(10, val.wedNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(10, val.thuNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(10, val.friNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(10, val.satNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(10, val.sunNF, val.name)
+							+rowElementAllPresentNF(reqmems,allPresent,'monNF',10)
+							+rowElementAllPresentNF(reqmems,allPresent,'tueNF',10)
+							+rowElementAllPresentNF(reqmems,allPresent,'wedNF',10)
+							+rowElementAllPresentNF(reqmems,allPresent,'thuNF',10)
+							+rowElementAllPresentNF(reqmems,allPresent,'friNF',10)
+							+rowElementAllPresentNF(reqmems,allPresent,'satNF',10)
+							+rowElementAllPresentNF(reqmems,allPresent,'sunNF',10)
 					tr
 						th(scope='row') 7:00 pm
-							td
-									ul 
-									each val in reqmems
-										+rowElementDisplay(11, val.monNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(11, val.tueNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(11, val.wedNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(11, val.thuNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(11, val.friNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(11, val.satNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(11, val.sunNF, val.name)
+							+rowElementAllPresentNF(reqmems,allPresent,'monNF',11)
+							+rowElementAllPresentNF(reqmems,allPresent,'tueNF',11)
+							+rowElementAllPresentNF(reqmems,allPresent,'wedNF',11)
+							+rowElementAllPresentNF(reqmems,allPresent,'thuNF',11)
+							+rowElementAllPresentNF(reqmems,allPresent,'friNF',11)
+							+rowElementAllPresentNF(reqmems,allPresent,'satNF',11)
+							+rowElementAllPresentNF(reqmems,allPresent,'sunNF',11)
 					tr
 						th(scope='row') 8:00 pm
-							td
-								ul 
-									each val in reqmems
-										+rowElementDisplay(12, val.monNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(12, val.tueNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(12, val.wedNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(12, val.thuNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(12, val.friNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(12, val.satNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(12, val.sunNF, val.name)
+							+rowElementAllPresentNF(reqmems,allPresent,'monNF',12)
+							+rowElementAllPresentNF(reqmems,allPresent,'tueNF',12)
+							+rowElementAllPresentNF(reqmems,allPresent,'wedNF',12)
+							+rowElementAllPresentNF(reqmems,allPresent,'thuNF',12)
+							+rowElementAllPresentNF(reqmems,allPresent,'friNF',12)
+							+rowElementAllPresentNF(reqmems,allPresent,'satNF',12)
+							+rowElementAllPresentNF(reqmems,allPresent,'sunNF',12)
 					tr
 						th(scope='row') 9:00 pm
-							td
-								ul 
-									each val in reqmems
-										+rowElementDisplay(13, val.monNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(13, val.tueNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(13, val.wedNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(13, val.thuNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(13, val.friNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(13, val.satNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(13, val.sunNF, val.name)
+							+rowElementAllPresentNF(reqmems,allPresent,'monNF',13)
+							+rowElementAllPresentNF(reqmems,allPresent,'tueNF',13)
+							+rowElementAllPresentNF(reqmems,allPresent,'wedNF',13)
+							+rowElementAllPresentNF(reqmems,allPresent,'thuNF',13)
+							+rowElementAllPresentNF(reqmems,allPresent,'friNF',13)
+							+rowElementAllPresentNF(reqmems,allPresent,'satNF',13)
+							+rowElementAllPresentNF(reqmems,allPresent,'sunNF',13)
 					tr
 						th(scope='row') 10:00 pm 
-							td
-								ul 
-									each val in reqmems
-										+rowElementDisplay(14, val.monNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(14, val.tueNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(14, val.wedNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(14, val.thuNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(14, val.friNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(14, val.satNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(14, val.sunNF, val.name)
+							+rowElementAllPresentNF(reqmems,allPresent,'monNF',14)
+							+rowElementAllPresentNF(reqmems,allPresent,'tueNF',14)
+							+rowElementAllPresentNF(reqmems,allPresent,'wedNF',14)
+							+rowElementAllPresentNF(reqmems,allPresent,'thuNF',14)
+							+rowElementAllPresentNF(reqmems,allPresent,'friNF',14)
+							+rowElementAllPresentNF(reqmems,allPresent,'satNF',14)
+							+rowElementAllPresentNF(reqmems,allPresent,'sunNF',14)
 					tr
 						th(scope='row') 11:00 pm
-							td
-								ul 
-									each val in reqmems
-										+rowElementDisplay(15, val.monNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(15, val.tueNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(15, val.wedNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(15, val.thuNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(15, val.friNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(15, val.satNF, val.name)
-							td
-								ul
-									each val in reqmems
-										+rowElementDisplay(15, val.sunNF, val.name)
+							+rowElementAllPresentNF(reqmems,allPresent,'monNF',15)
+							+rowElementAllPresentNF(reqmems,allPresent,'tueNF',15)
+							+rowElementAllPresentNF(reqmems,allPresent,'wedNF',15)
+							+rowElementAllPresentNF(reqmems,allPresent,'thuNF',15)
+							+rowElementAllPresentNF(reqmems,allPresent,'friNF',15)
+							+rowElementAllPresentNF(reqmems,allPresent,'satNF',15)
+							+rowElementAllPresentNF(reqmems,allPresent,'sunNF',15)
 			button.btn.btn-outline-warning.step2bck(type='button') Show Face to Face Availabilities

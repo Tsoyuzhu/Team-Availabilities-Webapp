@@ -1,15 +1,11 @@
-mixin rowElementAllPresentNF(reqmems, maxmems, day, index)
-	-var all = 1 
-	each val in reqmems 
-		all = all + val[day][index]
-
-	if all == maxmems
+mixin rowElementAllPresentNF(reqmems, allPresent, day, index)
+	if (allPresent[day][index])
 		td.allpresentNF
-			ul
+			ul 
 				each val in reqmems
-					+rowElementDisplay(0, val[day], val.name)
+					+rowElementDisplay(index, val[day], val.name)
 	else 
-		td 
-			ul
+		td
+			ul 
 				each val in reqmems
-					+rowElementDisplay(0, val[day], val.name)
+					+rowElementDisplay(index, val[day], val.name)

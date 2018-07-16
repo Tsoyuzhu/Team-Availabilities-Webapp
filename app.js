@@ -219,7 +219,7 @@ app.post('/find/display', function (req, res) {
 	     		sunNF: extractAllPresent(reqmems, 'sunNF')
 	     	};
 	     	console.log(allPresent);
-	 		res.render('display', {reqmems:reqmems, maxmems: array.length, allPresent:allPresent});
+	 		res.render('display', {reqmems:reqmems, allPresent:allPresent});
  		}
 	});
 	
