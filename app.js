@@ -199,7 +199,27 @@ app.post('/find/display', function (req, res) {
 		} else {
 	     	console.log(reqmems);
 	     	console.log(array.length);
-	 		res.render('display', {reqmems:reqmems, maxmems: array.length});
+	     	console.log('All present: ');
+	     	// Create an object which contains information about time slots where
+	     	// all members are present. 
+	     	var allPresent = {
+	     		monF: extractAllPresent(reqmems, 'monF'),
+	     		tueF: extractAllPresent(reqmems, 'tueF'),
+	     		wedF: extractAllPresent(reqmems, 'wedF'),
+	     		thuF: extractAllPresent(reqmems, 'thuF'),
+	     		friF: extractAllPresent(reqmems, 'friF'),
+	     		satF: extractAllPresent(reqmems, 'satF'),
+	     		sunF: extractAllPresent(reqmems, 'sunF'),
+	     		monNF: extractAllPresent(reqmems, 'monNF'),
+	     		tueNF: extractAllPresent(reqmems, 'tueNF'),
+	     		wedNF: extractAllPresent(reqmems, 'wedNF'),
+	     		thuNF: extractAllPresent(reqmems, 'thuNF'),
+	     		friNF: extractAllPresent(reqmems, 'friNF'),
+	     		satNF: extractAllPresent(reqmems, 'satNF'),
+	     		sunNF: extractAllPresent(reqmems, 'sunNF')
+	     	};
+	     	console.log(allPresent);
+	 		res.render('display', {reqmems:reqmems, maxmems: array.length, allPresent:allPresent});
  		}
 	});
 	
@@ -242,4 +262,17 @@ function extractTimes (parsedReq) {
 	    }
 	}
 	return array;
+}
+
+function extractAllPresent (reqmems, day) {
+	var retArray = []; 
+	// Arbitary 0. We just need the length of any day array. 
+	for (var k = 0; k < reqmems[0][day].length; k++) {
+		var allPresent = 1;
+		for (var i = 0; i < reqmems.length; i++) {
+			allPresent = allPresent * reqmems[i][day][k]; 
+		}
+		retArray.push(allPresent);
+	}
+	return retArray;
 }
