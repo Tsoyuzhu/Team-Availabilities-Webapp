@@ -7,20 +7,18 @@ html
 		style 
 			include index.css
 			include add.css
+			include table.css
 			include addstep1-mixin.pug 
 			include addstep2-mixin.pug 
 			include addstep3-mixin.pug
-			include rowElementCreateF-mixin.pug
-			include rowElementCreateNF-mixin.pug
+			include rowElementCreate-mixin.pug
 	body 
 		h1.textblock Add a Member to the System
 		.container
 			form(action='/add/submit', method='POST', id='availform')
 				+addstep1() 
 				+addstep2()
-				+addstep3() 
-
-				.option-select 
+				.option-select
 					form.option-row(action='/')
 						input.btn.btn-outline-info(type='submit' value='Go to Home')
 

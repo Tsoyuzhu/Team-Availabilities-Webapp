@@ -26,16 +26,6 @@ label {
 	font-weight: bold;
 }
 
-.trclickedF {
-	background: #b6f9ce;
-	border-color: #68e8b1;
-}
-
-.trclickedNF {
-	background: #85b1f7;
-	border-color: #85b1f7;
-}
-
 .textblock {
 	text-align: center;
 }
@@ -53,11 +43,6 @@ label {
 .option-select {
 	margin-top: 60px;
 	margin-bottom: 60px;
-}
-
-.check-input {
-	width: 30px;
-	display: none;
 }
 
 .name-label {

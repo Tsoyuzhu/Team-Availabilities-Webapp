@@ -1,16 +1,27 @@
 $(document).ready(function() {
+  // Cycle through the colours when clicked
   $('td.clickable').on("click", function(){
-  	if ( $(this).hasClass("colourF") ) {
+  	if ( $(this).hasClass("noColour") ) {
+      $(this).toggleClass("noColour");
   		$(this).toggleClass("trclickedF");
-  	}	
-  	if ( $(this).hasClass("colourNF") ) {
+  	}	else if ( $(this).hasClass("trclickedF") ) {
+      $(this).toggleClass("trclickedF");
   		$(this).toggleClass("trclickedNF");
-  	}
+  	} else if ( $(this).hasClass("trclickedNF") ) {
+      $(this).toggleClass("trclickedNF");
+      $(this).toggleClass("noColour");
+    }
 
-	if ( $(this).children().attr("value") == 0) {
-  		$(this).children().attr("value",1);
-	} else {
-		$(this).children().attr("value",0);
-	}
+    // Now alter the check boxes
+  	if ( $(this).hasClass("noColour") ) {
+    		$(this).children(".checkF").attr("value",0);
+        $(this).children(".checkNF").attr("value",0);
+  	} else if ( $(this).hasClass("trclickedF") ) {
+        $(this).children(".checkF").attr("value",1);
+        $(this).children(".checkNF").attr("value",1);
+    } else if ( $(this).hasClass("trclickedNF") ) {
+        $(this).children(".checkF").attr("value",0);
+        $(this).children(".checkNF").attr("value",1);
+    }
   });
 });
