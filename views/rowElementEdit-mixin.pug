@@ -1,8 +1,13 @@
-mixin rowElementEditF(time, day, index, valid)
-	if (valid[index] == 1)
-		td.clickable.trclicked(scope='row')
-			input.check-input(type='checkbox', name= day+'['+time+']', value=1, checked='checked') 
-	else 
-		td.clickable(scope='row')
-			input.check-input(type='checkbox', name= day+'['+time+']', value=0, checked='checked') 
-	
+mixin rowElementEdit(time, day, index, valid)
+	if ( (valid[day+'F'][index] == 1) && (valid[day+'NF'][index] == 1) )
+		td.clickable.trclickedF(scope='row')
+			input.check-input.checkF(type='checkbox', name= day+'F'+'['+time+']', value=1, checked='checked')
+			input.check-input.checkNF(type='checkbox', name= day+'NF'+'['+time+']', value=1, checked='checked')
+	else if ( (valid[day+'F'][index] == 0) && (valid[day+'NF'][index] == 1) )
+		td.clickable.trclickedNF(scope='row')
+			input.check-input.checkF(type='checkbox', name= day+'F'+'['+time+']', value=0, checked='checked')
+			input.check-input.checkNF(type='checkbox', name= day+'NF'+'['+time+']', value=1, checked='checked')
+	else
+		td.clickable.noColour(scope='row')
+			input.check-input.checkF(type='checkbox', name= day+'F'+'['+time+']', value=0, checked='checked')
+			input.check-input.checkNF(type='checkbox', name= day+'NF'+'['+time+']', value=0, checked='checked')

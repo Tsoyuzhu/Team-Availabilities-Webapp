@@ -1,11 +1,26 @@
 .allpresentF {
-	background-color: #d0fcc9;
+	background: #d83838;
+	border-color: #d83838;
+	border-width: 2px;
+	border-style: solid;
 }
 
 .allpresentNF {
-	background-color: #99d4ff;
+	background:  #ea9696;
+	border-color: #ea9696 ;
+	border-width: 2px;
+	border-style: solid;
 }
 
 .displaytableNF {
+	display: none;
+}
+
+.check-input {
+	width: 30px;
+	display: none;
+}
+
+.hidden {
 	display: none;
 }

@@ -1,10 +1,10 @@
 $(document).ready(function() {
   $('.step1fwd').click(function(){
-  	$('.addstep1').hide();
-  	$('.addstep2').show();
+  	$('.addstep1').fadeOut(250);
+  	$('.addstep2').fadeIn(1000);
   });
   $('.step2bck').click(function(){
-  	$('.addstep1').show();
-  	$('.addstep2').hide();
+	$('.addstep2').fadeOut(250);
+  	$('.addstep1').fadeIn(1000);
   });
 });

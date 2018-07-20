@@ -1,11 +1,11 @@
-mixin rowElementAllPresentF(reqmems, allPresent, day, index)
+mixin rowElementAllPresentF(reqmems, allPresent, maxmems, day, index)
 	if (allPresent[day][index])
 		td.allpresentF
 			ul 
 				each val in reqmems
-					+rowElementDisplay(index, val[day], val.name)
+					+rowElementDisplay(index, val[day], val.name, maxmems)
 	else 
 		td
 			ul 
 				each val in reqmems
-					+rowElementDisplay(index, val[day], val.name)
+					+rowElementDisplay(index, val[day], val.name, maxmems)

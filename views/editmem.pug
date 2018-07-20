@@ -6,11 +6,10 @@ html
 		link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
 		style 
 			include index.css
+			include table.css
 			include editmem.css
 			include editmemstep1-mixin.pug
-			include editmemstep2-mixin.pug
-			include rowElementEditF-mixin.pug
-			include rowElementEditNF-mixin.pug
+			include rowElementEdit-mixin.pug
 	body 
 		.container 
 			.textblock
@@ -26,12 +25,11 @@ html
 			.option-select
 				form(action='/edit/'+member._id, method='POST', id='updateform')
 					+editmemstep1(member)
-					+editmemstep2(member)
 				
 			.option-select 
-				button.btn.btn-outline-info(type='submit' form='updateform', id='submit') Confirm Member Availability Changes
+				button.btn.btn-outline-dark(type='submit' form='updateform', id='submit') Confirm Member Availability Changes
 				form.option-row(action='/')
-					input.btn.btn-outline-info(type='submit' value='Go to Home')
+					input.btn.btn-outline-dark(type='submit' value='Go to Home')
 
 		// Jquery Script for Bootstrap
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")

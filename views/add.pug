@@ -10,7 +10,6 @@ html
 			include table.css
 			include addstep1-mixin.pug 
 			include addstep2-mixin.pug 
-			include addstep3-mixin.pug
 			include rowElementCreate-mixin.pug
 	body 
 		h1.textblock Add a Member to the System
@@ -20,7 +19,7 @@ html
 				+addstep2()
 				.option-select
 					form.option-row(action='/')
-						input.btn.btn-outline-info(type='submit' value='Go to Home')
+						input.btn.btn-outline-dark(type='submit' value='Go to Home')
 
 		// Jquery Script for Bootstrap
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")

@@ -53,3 +53,11 @@
 - Also need to fix some bugs. App breaks when receiveing a request to display
   the availabilities of no members. Members should not enter a name which 
   already exists but this will not break the app.
+
+  ------------------------------------------------------------------------
+< 20/07/18 fri 09:23 pm >
+
+- Updated table colours based on team preference. 
+- Changed format for table when adding and editing availabilities. Instead
+  of having two tables, they are now a single table and users cycle through
+  cell colours by clicking multiple times. 
