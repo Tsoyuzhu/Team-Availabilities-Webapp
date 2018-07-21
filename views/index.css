@@ -35,6 +35,12 @@ label {
 	margin-bottom: 20px;
 }
 
+.center-instructions {
+	margin: auto;
+	padding-left: 20px;
+	width: 60%;
+}
+
 .centerBlock {
 	display: table;
 	margin: auto;
