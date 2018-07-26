@@ -16,12 +16,9 @@ html
 		.container 
 			.textblock
 				h1 Check Member Availabilities
-			.row
-				.col-md-6
-					+displaytableF(reqmems, maxmems)
-					+displaytableNF(reqmems, maxmems)
-				.col-md-6
-					//+displayNames(reqmems)
+				
+			+displaytableF(reqmems, maxmems)
+			+displaytableNF(reqmems, maxmems)
 
 			.option-select 
 				form.option-row(action='/')
