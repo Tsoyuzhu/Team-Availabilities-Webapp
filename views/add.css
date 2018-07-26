@@ -1,3 +1,8 @@
 .addstep2 {
 	display: none;
 }
+
+h4 {
+	text-align: left;
+	font-weight: bold;
+}
