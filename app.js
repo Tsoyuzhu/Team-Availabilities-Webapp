@@ -262,7 +262,6 @@ app.post('/auth', function (req, res) {
 	}
 });
 
-//DEPRECATED
 app.get('/destroy', function (req, res) {
 	res.render('auth');
 });

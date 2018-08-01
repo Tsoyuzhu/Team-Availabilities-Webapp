@@ -5,9 +5,9 @@ mixin addstep2()
 				Step 2 #[br]
 			.center-instructions
 				h4.
-					- Click the timeslot to cycle through the colours.#[br]
-					- Black means available face-to-face and online.#[br]
-					- Yellow means available online only. 
+					- #[strong Click] the timeslot to #[strong cycle] through the colours.#[br]
+					- #[strong Black] means available #[strong face-to-face and online].#[br]
+					- #[strong Yellow] means available #[strong online only]. 
 		.option-select
 			.row
 				.col-md-12
@@ -72,6 +72,6 @@ mixin addstep2()
 								th(scope='row') 11:00 pm
 								+rowElementCreate('23') 
 			.option-select
-				button.btn.btn-outline-danger.step2bck(type="button") Back to step 1
-				button.btn.btn-outline-success.step2fwd(type="submit") Submit Availabilities
+				button.btn.btn-outline-dark.step2bck(type="button") Back to step 1
+				button.btn.btn-outline-warning.step2fwd(type="submit") Submit Availabilities
 				.warning You did not enter a valid name. 
