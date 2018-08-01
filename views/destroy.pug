@@ -20,7 +20,7 @@ html
 						have any members to demolish.
 			.option-select
 				each val in members 
-					form.option-row(action='/destroy/'+val._id)
+					form.option-row(action='/destroy/'+val._id , method='POST')
 						input.btn.btn-outline-danger(type='submit' value=val.name)
 			.option-select 
 				form.option-row(action='/')

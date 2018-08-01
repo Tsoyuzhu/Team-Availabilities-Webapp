@@ -232,23 +232,56 @@ app.post('/find/display', function (req, res) {
 });
 
 //DESTROY
-app.get('/destroy', function (req, res) {
-	Member.find({}, function(err, members) {
-		if (err) {
-			console.log("FAILURE: find failed");
-		} else {
-			res.render('destroy', {members: members});
-		}
-	});
+// NOTE: Below is some poorly written code.
+// I ensured the security was sound by ensuring 
+// the delete page could only be accessed through
+// the auth page but in doing so created duplicate 
+// code and poor use of routing. 
+
+app.get('/auth', function (req, res) {
+	res.render('auth')
 });
-app.get('/destroy/:id', function(req, res){
+
+app.post('/auth', function (req, res) {
+	var user = req.body.usr;
+	var password = req.body.pwd;
+	// This is an incredibly terrible security system. 
+	// In future implement a proper authentication system
+	// with database verification. 
+	if (user == 'admin' && password == 'thelegend27') {
+		Member.find({}, function(err, members) {
+			if (err) {
+				console.log("FAILURE: find failed");
+			} else {
+				res.render('destroy', {members: members});
+				return;
+			}
+		});
+	} else {
+		res.render('auth', {success:0});
+	}
+});
+
+//DEPRECATED
+app.get('/destroy', function (req, res) {
+	res.render('auth');
+});
+
+app.post('/destroy/:id', function(req, res){
 	console.log("You sent the id "+req.params.id);
 	Member.remove({_id: req.params.id}, function(err) {
 		if (err) {
 			console.log("Failed to destroy the database member");
 		}
 	});
-	res.redirect('/destroy');
+	Member.find({}, function(err, members) {
+		if (err) {
+			console.log("FAILURE: find failed");
+		} else {
+			res.render('destroy', {members: members});
+			return;
+		}
+	});
 });
 
 // START SERVER

@@ -1,0 +1,35 @@
+doctype html
+html
+	head
+		title Authentication Page
+		link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Montserrat:300,700')
+		link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
+		style 
+			include index.css
+	body 
+		.container 
+			.textblock
+				h1 REAL SKILLS EDUCATION
+				h3.
+					You do not have permission#[br]
+					to delete shit. Yet.
+			.textblock 
+				if (success == 0) 
+					h4.invalidInput You entered an invalid username-password combination
+			.option-select
+				.centerBlock
+					form(action='/auth' method='POST')
+						label Username
+						input.form-control(type='text' name='usr' placeholder='Username' required) 
+						label Password
+						input.form-control(type='password' name='pwd' placeholder='Password' required)
+						input.btn.btn-outline-dark(type='submit' value='Authenticate')
+			.option-select
+				.centerBlock
+					form.option-row(action='/' id='homebutton')
+						input.btn.btn-outline-dark(type='submit' value='Go to Home' form='homebutton')
+
+		// Jquery Script for Bootstrap
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+		// Boostrap javascript 
+		script( src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")
